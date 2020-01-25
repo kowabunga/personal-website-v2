@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+}
+:root {
+  --primary-color: rgb(17, 24, 29);
+  --active-color: rgb(64, 155, 211);
+  --secondary-color: rgb(243, 243, 243);
+  --tertiary-color: rgb(63, 220, 201);
+  --link-active-color: rgb(30, 114, 223);
+}
+html {
+  background: url('/dist/img/colorful.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  color: var(--secondary-color);
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+}
+/* nav bar */
+.navbar ul {
+  display: grid;
+  list-style: none;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: var(--primary-color);
+  min-height: 5em;
+  text-align: center;
+}
+
+.navbar a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  width: 4em;
+}
+.navbar a.active {
+  color: var(--active-color);
+}
+
+.navbar a:hover {
+  color: var(--tertiary-color);
+}
+
+/* home page */
+
+#frontpage {
+  padding: 20px;
+  display: grid;
+  justify-self: center;
+  text-shadow: 1px 1px 2px black;
+  grid-template-areas:
+    'header header header'
+    'title title title'
+    'nada icons nothing';
+}
+#name {
+  font-size: 6em;
+  grid-area: header;
+}
+#title {
+  font-size: 2em;
+  margin-bottom: 2em;
+  grid-area: title;
+}
+#links {
+  grid-area: icons;
+}
+#giticon,
+#linkedicon {
+  color: var(--secondary-color);
+}
+#linkedicon {
+  margin-left: 0.5em;
+}
+#giticon:hover,
+#linkedicon:hover {
+  color: var(--link-active-color);
+}
+
+/* portfolio */
+#projects {
+  padding: 20px;
+
+  text-shadow: 1px 2px 2px solid;
+}
+#myproj {
+  font-size: 6em;
+}
+#looky {
+  font-size: 2em;
+}
+.webprojects {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'header header header' 'subheader subheader subheader' 'proj1 proj2 proj3';
+}
+.proj1 {
+  grid-area: proj1;
+}
+.proj2 {
+  grid-area: proj2;
+}
+.webprojects img {
+  margin-top: 3em;
+  width: 100%;
+  box-shadow: 0 1px 5px white;
+}
+#livelink,
+#codelink {
+  display: block;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 1px 5px white;
+}
+#livelink {
+  background-color: white;
+  color: black;
+}
+#codelink {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+a#livelink:hover {
+  background-color: var(--link-active-color);
+  color: var(--secondary-color);
+}
+a#codelink:hover {
+  background-color: var(--link-active-color);
+  color: var(--secondary-color);
+}
+/* About */
+#about {
+  padding: 20px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    'name pic'
+    'about pic';
+}
+#aboutname {
+  font-size: 6em;
+  grid-area: name;
+}
+#aboutme {
+  grid-area: about;
+  font-size: 1.3em;
+}
+#picture {
+  grid-area: pic;
+  margin-top: 2em;
+  width: 100%;
+  box-shadow: 0 1px 5px white;
+}
+/* contact */
+#contact {
+  padding: 20px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    'header form'
+    'subheader form';
+}
+#contactme {
+  font-size: 6em;
+  grid-area: header;
+}
+#contactmesub {
+  font-size: 2em;
+  grid-area: subheader;
+}
+#contactform {
+  grid-area: form;
+  height: 50em;
+}
+@media (max-width: 590px) {
+  .navbar ul {
+    grid-template-columns: 1fr;
+  }
+  .navbar li {
+    border-bottom: 1px solid #666;
+  }
+  #frontpage {
+    justify-self: start;
+    font-size: 0.8em;
+    grid-template-areas:
+      'header'
+      'title'
+      'icons';
+  }
+  #projects {
+    font-size: 0.7em;
+  }
+  .webprojects {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header'
+      'subheader'
+      'proj1'
+      'proj2';
+  }
+  #about {
+    font-size: 1em;
+  }
+  #contact {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header'
+      'subheader'
+      'form';
+  }
+}
+@media (max-width: 976px) {
+  #about {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'name'
+      'about'
+      'pic';
+  }
+  #contact {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header'
+      'subheader'
+      'form';
+  }
+}
