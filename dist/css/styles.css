@@ -14,15 +14,11 @@
   --link-active-color: rgb(30, 114, 223);
 }
 html {
+  background: url('/dist/img/colorful.png');
   background-size: cover;
   background-attachment: fixed;
   background-position: top;
   color: var(--secondary-color);
-}
-body {
-  background-color: #333;
-  background: url('/img/colorful.png');
-  background: url('/dist/img/colorful.png');
 }
 
 .container {
