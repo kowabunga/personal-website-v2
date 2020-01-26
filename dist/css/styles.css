@@ -203,6 +203,7 @@ a#codelink:hover {
 #contactform {
   grid-area: form;
   height: 50em;
+  width: 100%;
 }
 @media (max-width: 590px) {
   .navbar ul {
