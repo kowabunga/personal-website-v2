@@ -44,6 +44,13 @@
         </div>
       </section>
     </div>
+    <footer id="footer">
+      <p>Copyright &copy; <span id="year"></span> Anthony Siletti</p>
+    </footer>
     <!-- ^ container ends ^ -->
   </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>
+    $('#year').text(new Date().getFullYear());
+  </script>
 </html>

@@ -24,6 +24,7 @@ html {
 .container {
   display: grid;
   grid-gap: 20px;
+  margin-bottom: 3em;
 }
 /* nav bar */
 .navbar ul {
@@ -52,7 +53,18 @@ html {
 .navbar a:hover {
   color: var(--tertiary-color);
 }
-
+#footer {
+  font-size: 1.5em;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2.5em;
+  background-color: var(--primary-color);
+  align-items: center;
+  justify-content: center;
+}
 /* home page */
 
 #frontpage {
@@ -115,6 +127,7 @@ html {
 }
 .webprojects img {
   margin-top: 3em;
+  margin-bottom: 0.8em;
   width: 100%;
   box-shadow: 0 1px 5px white;
 }
@@ -123,7 +136,7 @@ html {
   display: block;
   border-radius: 2px;
   padding: 8px;
-  margin-bottom: 5px;
+  margin-bottom: 0.7em;
   text-align: center;
   text-decoration: none;
   box-shadow: 0 1px 5px white;
