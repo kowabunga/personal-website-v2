@@ -51,6 +51,9 @@ html {
 .navbar a.active {
   color: var(--active-color);
 }
+.navbar .icon {
+  display: none;
+}
 
 .navbar a:hover {
   color: var(--tertiary-color);
@@ -212,7 +215,18 @@ a#codelink:hover {
     grid-template-columns: 1fr;
   }
   .navbar li {
+    display: none;
     border-bottom: 1px solid #666;
+  }
+  .navbar .icon {
+    display: block;
+    position: fixed;
+    top: 0.6em;
+    right: 0;
+  }
+  .navbar.responsive li {
+    display: block;
+    padding: 0.5em;
   }
   #frontpage {
     justify-self: start;
