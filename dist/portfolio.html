@@ -50,10 +50,10 @@
     </footer>
     <!-- ^ container ends ^ -->
   </body>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
   <script>
     // get constant update for year
-    $('#year').text(new Date().getFullYear());
+    document.getElementById('year').innerHTML = new Date().getFullYear();
 
     //dropdown toggle
     menubtn = document.getElementById('menubtn');

@@ -212,6 +212,8 @@ a#codelink:hover {
 }
 @media (max-width: 590px) {
   .navbar ul {
+    position: absolute;
+    width: 100%;
     grid-template-columns: 1fr;
   }
   .navbar li {
@@ -225,8 +227,12 @@ a#codelink:hover {
     right: 0;
   }
   .navbar.responsive li {
+    position: relative;
     display: block;
     padding: 0.5em;
+  }
+  .container {
+    padding-top: 4em;
   }
   #frontpage {
     justify-self: start;
