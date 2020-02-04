@@ -24,7 +24,7 @@
           <a href="contact.html">Contact</a>
         </li>
       </ul>
-      <a href="javascript:void(0);" class="icon" id="menubtn"> <i class="fa fa-bars"></i></a>
+      <a class="icon" id="menubtn"> <i class="fa fa-bars"></i></a>
     </nav>
     <div class="container">
       <!-- about -->
@@ -43,21 +43,5 @@
     <!-- ^ container ends ^ -->
   </body>
 
-  <script>
-    // get constant update for year
-    document.getElementById('year').innerHTML = new Date().getFullYear();
-
-    //dropdown toggle
-    menubtn = document.getElementById('menubtn');
-    menubtn.addEventListener('click', dropdown);
-
-    function dropdown() {
-      var elem = document.getElementById('nav');
-      if (elem.className === 'navbar') {
-        elem.className += ' responsive';
-      } else {
-        elem.className = 'navbar';
-      }
-    }
-  </script>
+  <script src="scripts/script.js"></script>
 </html>

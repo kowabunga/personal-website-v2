@@ -54,9 +54,11 @@ html {
 .navbar .icon {
   display: none;
 }
-
 .navbar a:hover {
   color: var(--tertiary-color);
+}
+.navbar a.icon {
+  cursor: pointer;
 }
 #footer {
   font-size: 1.5em;
@@ -254,10 +256,12 @@ a#codelink:hover {
       'header'
       'subheader'
       'proj1'
-      'proj2';
+      'proj2'
+      'proj3';
   }
-  #about {
-    font-size: 1em;
+  #livelink,
+  #codelink {
+    font-size: 1.5em;
   }
   #contact {
     grid-template-columns: 1fr;
