@@ -130,6 +130,9 @@ html {
 .proj2 {
   grid-area: proj2;
 }
+.proj3 {
+  grid-area: proj3;
+}
 .webprojects img {
   margin-top: 3em;
   margin-bottom: 0.8em;
