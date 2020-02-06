@@ -111,7 +111,6 @@ html {
 /* portfolio */
 #projects {
   padding: 20px;
-
   text-shadow: 1px 2px 2px solid;
 }
 #myproj {
@@ -189,7 +188,7 @@ a#codelink:hover {
 #picture {
   grid-area: pic;
   margin-top: 2em;
-  width: 100%;
+  width: 80%;
   box-shadow: 0 1px 5px white;
 }
 /* contact */
