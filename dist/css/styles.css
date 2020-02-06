@@ -216,7 +216,7 @@ a#codelink:hover {
 }
 @media (max-width: 590px) {
   .navbar ul {
-    position: absolute;
+    position: fixed;
     width: 100%;
     grid-template-columns: 1fr;
   }
