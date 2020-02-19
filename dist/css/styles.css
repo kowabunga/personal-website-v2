@@ -106,7 +106,8 @@ html {
   display: flex;
   flex-direction: row;
   grid-area: icons;
-  column-gap: 20px;
+  justify-content: space-evenly;
+  width: 125px;
 }
 
 #giticon,
