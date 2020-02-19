@@ -53,9 +53,9 @@ html {
   width: 4em;
 }
 
-/* .navbar a.active {
-  color: var(--active-color);
-} */
+.navbar a.active {
+  text-decoration: underline;
+}
 
 .navbar .icon {
   display: none;
