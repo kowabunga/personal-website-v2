@@ -259,6 +259,10 @@ a.codelink:hover {
 
 /* Media Queries */
 @media (max-width: 590px) {
+  .navbar {
+    position: relative;
+    z-index: 1;
+  }
 
   .navbar ul {
     position: fixed;
@@ -268,6 +272,8 @@ a.codelink:hover {
   }
 
   .navbar.responsiveIn ul {
+    padding-top: 1em;
+    padding-bottom: 5em;
     height: 100vh;
     transition: ease-in .4s;
   }
