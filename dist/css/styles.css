@@ -256,6 +256,7 @@ a.codelink:hover {
   width: 100%;
 }
 
+/* Media Queries */
 @media (max-width: 590px) {
 
   .navbar ul {
