@@ -17,7 +17,6 @@
   --primary-color: rgb(17, 24, 29);
   --active-color: rgb(64, 155, 211);
   --secondary-color: rgb(243, 243, 243);
-  --tertiary-color: rgb(63, 220, 201);
   --link-active-color: rgb(30, 114, 223);
 }
 
@@ -65,7 +64,7 @@ html {
 }
 
 .navbar a:hover {
-  color: var(--tertiary-color);
+  color: var(--link-active-color);
 }
 
 .navbar a.active {
