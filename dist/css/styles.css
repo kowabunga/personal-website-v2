@@ -61,7 +61,7 @@ html {
   font-size: 2em;
   color: var(--secondary-color);
   width: 4em;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .navbar a:hover {
@@ -71,7 +71,6 @@ html {
 .navbar a.active {
   text-decoration: underline;
 }
-
 
 .navbar .icon {
   display: none;
@@ -129,7 +128,7 @@ html {
 #giticon,
 #linkedicon {
   color: var(--secondary-color);
-  transition: .4s;
+  transition: 0.4s;
 }
 
 #linkedicon:hover,
@@ -193,13 +192,13 @@ html {
 .livelink {
   background-color: var(--secondary-color);
   color: black;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .codelink {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  transition: .4s;
+  transition: 0.4s;
 }
 
 a.livelink:hover {
@@ -288,12 +287,12 @@ a.codelink:hover {
     padding-top: 1em;
     padding-bottom: 5em;
     height: 100vh;
-    transition: ease-in .4s;
+    transition: ease-in 0.4s;
   }
 
   .navbar.responsiveOut ul {
     height: 3em;
-    transition: ease-out .4s;
+    transition: ease-out 0.4s;
   }
 
   .navbar li {
@@ -301,23 +300,21 @@ a.codelink:hover {
     border-bottom: 1px solid #666;
   }
 
-
-  .navbar.responsiveIn li {
+  .navbar.liIn li {
     opacity: 1;
-    transition-delay: .2s;
+    transition: .3s;
   }
 
+  .navbar.liOut li {
+    opacity: 0;
+    transition: .3s;
+  }
 
   .navbar .icon {
     display: block;
     position: fixed;
     top: 0.6em;
     right: 0;
-  }
-
-  .navbar.responsiveOut li {
-    opacity: 0;
-    transition-delay: .2s;
   }
 
   .container {
