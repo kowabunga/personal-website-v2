@@ -286,12 +286,13 @@ a.codelink:hover {
     padding-top: 1em;
     padding-bottom: 5em;
     height: 100vh;
-    transition: ease-in 0.4s;
+    transition: 0.4s ease-in;
+    transition-duration: .4s;
   }
 
   .navbar.responsiveOut ul {
     height: 3em;
-    transition: ease-out 0.4s;
+    transition:  0.4s ease-out;
   }
 
   .navbar li {
@@ -300,13 +301,13 @@ a.codelink:hover {
   }
 
   .navbar.liIn li {
-    opacity: 1;
-    transition: .3s;
+    opacity: 1!important;
+    transition: .3s ease-in;
   }
 
   .navbar.liOut li {
-    opacity: 0;
-    transition: .3s;
+    opacity: 0!important;
+    transition: .3s ease-out;
   }
 
   .navbar .icon {
