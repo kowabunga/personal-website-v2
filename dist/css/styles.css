@@ -120,6 +120,7 @@ html {
 #links {
   display: flex;
   grid-area: icons;
+  justify-content: space-between;
   justify-content: space-evenly;
   width: 125px;
 }
