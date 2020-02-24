@@ -310,6 +310,11 @@ a.codelink:hover {
     transition: .3s ease-out;
   }
 
+  /* For some reason, this needs to be added to make the fade work on edge */
+  .navbar.liIn li a{
+    color: var(--secondary-color);
+  }
+
   .navbar .icon {
     display: block;
     position: fixed;
