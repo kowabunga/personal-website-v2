@@ -292,7 +292,7 @@ a.codelink:hover {
 
   .navbar.responsiveOut ul {
     height: 3em;
-    transition:  0.4s ease-out;
+    transition: 0.4s ease-out;
   }
 
   .navbar li {
@@ -301,17 +301,21 @@ a.codelink:hover {
   }
 
   .navbar.liIn li {
-    opacity: 1!important;
+    opacity: 1 !important;
     transition: .3s ease-in;
   }
 
   .navbar.liOut li {
-    opacity: 0!important;
+    opacity: 0 !important;
     transition: .3s ease-out;
   }
 
+  .navbar.liIn a:hover {
+    color: var(--link-active-color);
+  }
+
   /* For some reason, this needs to be added to make the fade work on edge */
-  .navbar.liIn li a{
+  .navbar.liIn li a {
     color: var(--secondary-color);
   }
 
