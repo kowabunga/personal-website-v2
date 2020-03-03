@@ -14,7 +14,7 @@
 /* ---------------------------------------------------------------- */
 /* color variables */
 :root {
-  --primary-color: rgb(17, 24, 29);
+  --primary-color: rgba(17, 24, 29, .8);
   --active-color: rgb(64, 155, 211);
   --secondary-color: rgb(243, 243, 243);
   --link-active-color: rgb(30, 114, 223);
@@ -71,7 +71,6 @@ body * {
   position: sticky;
   top: 0;
   z-index: 2;
-  opacity: .8;
 }
 
 .navbar.show {
