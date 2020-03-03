@@ -29,7 +29,6 @@
     if (scrollPosition >= parseInt(bodyHeight / 2.5 + bodyHeight * 0.25)) {
       contact.classList.add('show');
     }
-    console.log(document.body.clientHeight);
   });
 
   /* ---------------------------------------------------------------- */

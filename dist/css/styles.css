@@ -30,6 +30,8 @@ html {
   color: var(--secondary-color);
   position: relative;
   min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body::after {
@@ -59,6 +61,7 @@ body * {
     'projects'
     'about'
     'contact';
+  max-width: 100vw;
 }
 
 /* ---------------------------------------------------------------- */
@@ -330,6 +333,7 @@ a.codelink:hover {
   border: none;
 }
 
+
 /* ---------------------------------------------------------------- */
 /* Media Queries */
 
@@ -339,6 +343,14 @@ a.codelink:hover {
     grid-template-areas: 'header nada'
       'proj1 proj2'
       'proj3 empty';
+  }
+
+  #contact {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header'
+      'subheader'
+      'form';
   }
 }
 
@@ -351,13 +363,6 @@ a.codelink:hover {
       'pic';
   }
 
-  #contact {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      'header'
-      'subheader'
-      'form';
-  }
 }
 
 @media (max-width: 590px) {
@@ -456,4 +461,5 @@ a.codelink:hover {
       'subheader'
       'form';
   }
+
 }
