@@ -6,15 +6,36 @@
   //dropdown toggle
   const menubtn = document.getElementById('menubtn'),
     navbar = document.getElementById('nav'),
-    body = document.body;
+    intro = document.getElementById('frontpage'),
+    projects = document.getElementById('projects'),
+    about = document.getElementById('about'),
+    contact = document.getElementById('contact');
 
-  // add show class on load
+  // Slide in navbar, intro, on page load
   window.onload = () => {
     navbar.classList.add('show');
+    intro.classList.add('show');
+    projects.classList.add('show');
   };
+  // Fade in about and contact on scroll position
+  window.addEventListener('scroll', e => {
+    let scrollPosition = this.scrollY;
+    let bodyHeight = document.body.clientHeight;
+    // roughly half of the way down
+    if (scrollPosition >= parseInt(bodyHeight / 2.5)) {
+      about.classList.add('show');
+    }
+    // roughly 3/4 of the way down
+    if (scrollPosition >= parseInt(bodyHeight / 2.5 + bodyHeight * 0.25)) {
+      contact.classList.add('show');
+    }
+    console.log(document.body.clientHeight);
+  });
+
   /* ---------------------------------------------------------------- */
   // nav dropdown click
-  menubtn.addEventListener('click', () => {
+  menubtn.addEventListener('click', e => {
+    console.log(e.target);
     if (!navbar.classList.contains('responsiveIn')) {
       navbar.classList.add('responsiveIn');
       // add li in class 300 ms into nav bar scroll down

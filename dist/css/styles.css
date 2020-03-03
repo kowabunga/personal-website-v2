@@ -32,18 +32,6 @@ html {
   min-height: 100%;
 }
 
-/* body {
-  transform: translateX(-150vw);
-  transition: .8s ease-in;
-  height: 100vh;
-}
-
-body.show {
-  transform: translateX(0vw);
-} */
-
-
-
 body::after {
   content: '';
   background-color: rgba(0, 0, 0, .2);
@@ -76,7 +64,7 @@ body * {
 /* ---------------------------------------------------------------- */
 .navbar {
   transform: translateY(-7em);
-  transition: .5s ease-in;
+  transition: .5s ease-out;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -148,6 +136,12 @@ body * {
     'nada icons nothing';
   padding: 20px;
   margin-bottom: 20em;
+  transform: translateX(-100vw);
+  transition: .8s ease-out;
+}
+
+#frontpage.show {
+  transform: translateX(0);
 }
 
 #name {
@@ -186,7 +180,12 @@ body * {
   text-shadow: 1px 2px 2px solid;
   grid-area: projects;
   margin-bottom: 20em;
+  transform: translateX(200vw);
+  transition: .8s ease-out;
+}
 
+#projects.show {
+  transform: translateX(0);
 }
 
 #myproj {
@@ -269,6 +268,12 @@ a.codelink:hover {
     'pic name '
     'pic about';
   margin-bottom: 20em;
+  opacity: 0;
+  transition: opacity .8s ease-out;
+}
+
+#about.show {
+  opacity: 1;
 }
 
 #aboutname {
@@ -299,8 +304,13 @@ a.codelink:hover {
   grid-template-areas:
     'header form'
     'subheader form';
-  margin-bottom: 5em;
+  margin-bottom: 1em;
+  opacity: 0;
+  transition: opacity .8s ease-in;
+}
 
+#contact.show {
+  opacity: 1;
 }
 
 #contactme {
