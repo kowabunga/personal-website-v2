@@ -138,7 +138,7 @@ body * {
     'title title title'
     'nada icons nothing';
   padding: 20px;
-  margin-bottom: 20em;
+  margin-bottom: 10em;
   transform: translateX(-100vw);
   transition: .8s ease-out;
 }
@@ -182,7 +182,7 @@ body * {
   padding: 20px;
   text-shadow: 1px 2px 2px solid;
   grid-area: projects;
-  margin-bottom: 20em;
+  margin-bottom: 10em;
   transform: translateX(200vw);
   transition: .8s ease-out;
 }
@@ -270,7 +270,7 @@ a.codelink:hover {
   grid-template-areas:
     'pic name '
     'pic about';
-  margin-bottom: 20em;
+  margin-bottom: 10em;
   opacity: 0;
   transition: opacity .8s ease-out;
 }

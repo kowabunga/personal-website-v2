@@ -26,7 +26,7 @@
       about.classList.add('show');
     }
     // roughly 3/4 of the way down
-    if (scrollPosition >= parseInt(bodyHeight / 2.5 + bodyHeight * 0.25)) {
+    if (scrollPosition >= parseInt(bodyHeight / 3 + bodyHeight * 0.25)) {
       contact.classList.add('show');
     }
   });
