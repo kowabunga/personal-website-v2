@@ -9,7 +9,8 @@
     intro = document.getElementById('frontpage'),
     projects = document.getElementById('projects'),
     about = document.getElementById('about'),
-    contact = document.getElementById('contact');
+    contact = document.getElementById('contact'),
+    navUL = document.getElementById('navUL');
 
   // Slide in navbar, intro, on page load
   window.onload = () => {
@@ -34,7 +35,6 @@
   /* ---------------------------------------------------------------- */
   // nav dropdown click
   menubtn.addEventListener('click', e => {
-    console.log(e.target);
     if (!navbar.classList.contains('responsiveIn')) {
       navbar.classList.add('responsiveIn');
       // add li in class 300 ms into nav bar scroll down
@@ -43,6 +43,23 @@
       }, 300);
     } else {
       // remove responsive "in" classes
+      navbar.classList.remove('responsiveIn');
+      navbar.classList.remove('liIn');
+
+      // add responsive "out" classes, with li 300ms afterwards
+      navbar.classList.add('responsiveOut');
+      navbar.classList.add('liOut');
+
+      setTimeout(() => {
+        navbar.classList.remove('responsiveOut');
+        navbar.classList.remove('liOut');
+      }, 401);
+    }
+  });
+
+  navUL.addEventListener('click', e => {
+    // remove responsive "in" classes
+    if (e.target.classList.contains('link')) {
       navbar.classList.remove('responsiveIn');
       navbar.classList.remove('liIn');
 

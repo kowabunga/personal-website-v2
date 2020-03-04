@@ -369,6 +369,7 @@ a.codelink:hover {
   .navbar {
     position: relative;
     z-index: 2;
+    position: sticky;
   }
 
   .navbar ul {
