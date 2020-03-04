@@ -57,6 +57,8 @@
     }
   });
 
+  // This is necessary to remove the nav bar on mobile when a link is clicked.
+  // Otherwise, the link doesn't get removed.
   navUL.addEventListener('click', e => {
     // remove responsive "in" classes
     if (e.target.classList.contains('link')) {
