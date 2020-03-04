@@ -22,8 +22,8 @@
   window.addEventListener('scroll', e => {
     let scrollPosition = this.scrollY;
     let bodyHeight = document.body.clientHeight;
-    // roughly half of the way down
-    if (scrollPosition >= parseInt(bodyHeight / 2.5)) {
+    // roughly 1/3 of the way down
+    if (scrollPosition >= parseInt(bodyHeight / 3.3)) {
       about.classList.add('show');
     }
     // roughly 3/4 of the way down
