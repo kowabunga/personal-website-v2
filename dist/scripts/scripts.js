@@ -36,13 +36,17 @@
   // nav dropdown click
   menubtn.addEventListener('click', e => {
     if (!navbar.classList.contains('responsiveIn')) {
+      menubtn.classList.add('rotate');
       navbar.classList.add('responsiveIn');
       // add li in class 300 ms into nav bar scroll down
+      // Ensures the nav bar has "opened" all the way before the links appear
       setTimeout(() => {
         navbar.classList.add('liIn');
       }, 300);
     } else {
       // remove responsive "in" classes
+      menubtn.classList.remove('rotate');
+
       navbar.classList.remove('responsiveIn');
       navbar.classList.remove('liIn');
 

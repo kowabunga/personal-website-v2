@@ -104,7 +104,6 @@ body * {
   color: var(--link-active-color);
 }
 
-
 .navbar .icon {
   display: none;
 }
@@ -130,7 +129,7 @@ body * {
 /* home page */
 
 #frontpage {
-  grid-auto-rows: home;
+  grid-area: home;
   display: grid;
   justify-self: center;
   text-shadow: 1px 1px 2px black;
@@ -363,7 +362,6 @@ a.codelink:hover {
       'about'
       'pic';
   }
-
 }
 
 @media (max-width: 590px) {
@@ -381,6 +379,47 @@ a.codelink:hover {
     flex-direction: column;
   }
 
+  /* position icon */
+  .navbar .icon {
+    display: block;
+    position: fixed;
+    top: 2em;
+    right: 2em;
+    cursor: pointer;
+    transition: .3s ease-in;
+    transform: scale(1.3);
+  }
+
+  /* style hamburger bars */
+  .bar {
+    height: 2px;
+    width: 27px;
+    margin: 0 0 6px 0;
+    background-color: #fff;
+    transition: .3s ease-in;
+  }
+
+  /* rotate burger and bars */
+  .icon.rotate {
+    transform: scale(1.3);
+    margin-right: 10px;
+  }
+
+  .icon.rotate .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 4.9px);
+  }
+
+  .icon.rotate .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .icon.rotate .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6.8px);
+  }
+
+  /* responsiveIn classes add animation nav ul dropdown appearance
+     responsiveOut classes do the reverse
+  */
   .navbar.responsiveIn ul {
     padding-top: 1em;
     padding-bottom: 5em;
@@ -394,19 +433,29 @@ a.codelink:hover {
     transition: 0.4s ease-out;
   }
 
-  .navbar li {
+  /* every other li comes in from the opposite side */
+  .navbar li:nth-child(odd) {
     opacity: 0;
-    border-bottom: 1px solid #666;
+    transform: translateX(-100vw);
   }
 
+  .navbar li:nth-child(even) {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+
+  /* liIn classes add animation link appearance
+     liOut classes do the reverse
+  */
   .navbar.liIn li {
-    opacity: 1 !important;
+    opacity: 1;
     transition: .3s ease-in;
+    transform: translateX(0);
   }
 
   .navbar.liOut li {
-    opacity: 0 !important;
-    transition: .3s ease-out;
+    opacity: 0;
+    transition: .3s ease-in;
   }
 
   .navbar.liIn a:hover {
@@ -416,13 +465,6 @@ a.codelink:hover {
   /* For some reason, this needs to be added to make the fade work on edge */
   .navbar.liIn li a {
     color: var(--secondary-color);
-  }
-
-  .navbar .icon {
-    display: block;
-    position: fixed;
-    top: 0.6em;
-    right: 0;
   }
 
   .container {
