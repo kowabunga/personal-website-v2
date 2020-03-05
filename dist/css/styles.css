@@ -17,6 +17,7 @@
   --primary-color: rgba(17, 24, 29, .8);
   --active-color: rgb(64, 155, 211);
   --secondary-color: rgb(243, 243, 243);
+  --secondary-color-transparent: rgb(243, 243, 243, .8);
   --link-active-color: rgb(30, 114, 223);
 }
 
@@ -238,7 +239,7 @@ body * {
 }
 
 .livelink {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color-transparent);
   color: black;
   transition: 0.4s;
 }
