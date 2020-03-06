@@ -482,10 +482,12 @@ a.codelink:hover {
       'header'
       'title'
       'icons';
+    margin-bottom: 0;
   }
 
   #projects {
     font-size: 0.7em;
+    margin-bottom: 0;
   }
 
   .webprojects {
@@ -509,6 +511,7 @@ a.codelink:hover {
       'header'
       'subheader'
       'form';
+    margin-bottom: 0;
   }
 
 }
