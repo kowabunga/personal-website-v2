@@ -24,7 +24,7 @@
 /* ---------------------------------------------------------------- */
 /* html */
 html {
-  background: url('../img/colorful.jpg');
+  background: url('../img/colorfulHorizontal.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: top;
@@ -33,6 +33,7 @@ html {
   min-height: 100%;
   width: 100%;
   overflow-x: hidden;
+  z-index: -1;
 }
 
 body::after {
@@ -361,6 +362,13 @@ a.codelink:hover {
 }
 
 @media (max-width: 590px) {
+  html {
+    background: url('../img/colorfulVertical.jpg');
+    background-repeat: vertical;
+    background-size: contain;
+    background-position-x: left;
+  }
+
   .navbar {
     position: relative;
     z-index: 2;
