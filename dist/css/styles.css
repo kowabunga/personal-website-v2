@@ -201,6 +201,7 @@ body * {
     'header header header'
     'subheader subheader subheader'
     'proj1 proj2 proj3'
+    'proj4 nada nada'
   ;
 }
 
@@ -214,6 +215,10 @@ body * {
 
 .proj3 {
   grid-area: proj3;
+}
+
+.proj4 {
+  grid-area: proj4
 }
 
 .webprojects img {
@@ -342,7 +347,7 @@ a.codelink:hover {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'header nada'
       'proj1 proj2'
-      'proj3 empty';
+      'proj3 proj4';
   }
 
   #contact {
@@ -475,7 +480,7 @@ a.codelink:hover {
 
   #projects {
     font-size: 0.7em;
-    margin-bottom: 0;
+    margin: 5em 0 0 0;
   }
 
   .webprojects {
@@ -485,7 +490,8 @@ a.codelink:hover {
       'subheader'
       'proj1'
       'proj2'
-      'proj3';
+      'proj3'
+      'proj4';
   }
 
   .livelink,
