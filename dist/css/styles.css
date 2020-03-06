@@ -33,7 +33,6 @@ html {
   min-height: 100%;
   width: 100%;
   overflow-x: hidden;
-  z-index: -1;
 }
 
 body::after {
