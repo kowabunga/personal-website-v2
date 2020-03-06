@@ -6,7 +6,7 @@
   //dropdown toggle
   const menubtn = document.getElementById('menubtn'),
     navbar = document.getElementById('nav'),
-    intro = document.getElementById('frontpage'),
+    intro = document.getElementById('intro'),
     projects = document.getElementById('projects'),
     about = document.getElementById('about'),
     contact = document.getElementById('contact'),

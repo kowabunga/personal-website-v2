@@ -54,7 +54,6 @@ body * {
 /* main container */
 .container {
   display: grid;
-  grid-gap: 20px;
   margin-bottom: 3em;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -84,16 +83,12 @@ body * {
   list-style: none;
   align-items: center;
   justify-content: space-evenly;
-  grid-template-columns: repeat(4, 1fr);
   background-color: var(--primary-color);
   min-height: 5em;
-  text-align: center;
 }
 
 .navbar a {
-  display: block;
   text-decoration: none;
-  text-align: center;
   font-size: 2em;
   color: var(--secondary-color);
   width: 4em;
@@ -124,7 +119,7 @@ body * {
 /* ---------------------------------------------------------------- */
 /* home page */
 
-#frontpage {
+#intro {
   grid-area: home;
   display: grid;
   justify-self: center;
@@ -139,7 +134,7 @@ body * {
   transition: .8s ease-out;
 }
 
-#frontpage.show {
+#intro.show {
   transform: translateX(0);
 }
 
@@ -199,7 +194,11 @@ body * {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: 'header header header''subheader subheader subheader''proj1 proj2 proj3';
+  grid-template-areas:
+    'header header header'
+    'subheader subheader subheader'
+    'proj1 proj2 proj3'
+  ;
 }
 
 .proj1 {
@@ -215,10 +214,14 @@ body * {
 }
 
 .webprojects img {
-  margin-top: 3em;
   margin-bottom: 0.8em;
   width: 100%;
   box-shadow: 0 1px 5px var(--secondary-color);
+}
+
+.webprojects img:hover {
+  transition: .3s ease-out;
+  box-shadow: 0 1px 20px var(--link-active-color);
 }
 
 .livelink,
@@ -261,7 +264,6 @@ a.codelink:hover {
   grid-area: about;
   padding: 20px;
   display: grid;
-  grid-gap: 20px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     'pic name '
@@ -290,6 +292,7 @@ a.codelink:hover {
   margin-top: 2em;
   width: 80%;
   box-shadow: 0 1px 5px var(--secondary-color);
+  border-radius: 50%;
 }
 
 /* ---------------------------------------------------------------- */
@@ -298,7 +301,6 @@ a.codelink:hover {
   grid-area: contact;
   padding: 20px;
   display: grid;
-  grid-gap: 20px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     'header form'
@@ -328,7 +330,6 @@ a.codelink:hover {
   width: 100%;
   border: none;
 }
-
 
 /* ---------------------------------------------------------------- */
 /* Media Queries */
@@ -418,8 +419,6 @@ a.codelink:hover {
      responsiveOut classes do the reverse
   */
   .navbar.responsiveIn ul {
-    padding-top: 1em;
-    padding-bottom: 5em;
     height: 100vh;
     transition: 0.4s ease-in;
     transition-duration: .4s;
@@ -468,7 +467,7 @@ a.codelink:hover {
     padding-top: 4em;
   }
 
-  #frontpage {
+  #intro {
     justify-self: start;
     font-size: 0.8em;
     grid-template-areas:
