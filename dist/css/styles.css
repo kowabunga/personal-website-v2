@@ -62,13 +62,15 @@ body * {
     'about'
     'contact';
   max-width: 100vw;
+  padding-top: 5em;
 }
 
 /* ---------------------------------------------------------------- */
 .navbar {
   transform: translateY(-7em);
   transition: .5s ease-out;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 2;
 }
@@ -86,6 +88,7 @@ body * {
   background-color: var(--primary-color);
   min-height: 5em;
 }
+
 
 .navbar a {
   text-decoration: none;
@@ -220,8 +223,8 @@ body * {
 }
 
 .webprojects img:hover {
-  transition: .3s ease-out;
-  box-shadow: 0 1px 20px var(--link-active-color);
+  box-shadow: 0 1px 20px var(--secondary-color);
+
 }
 
 .livelink,
@@ -363,18 +366,11 @@ a.codelink:hover {
 
 @media (max-width: 590px) {
 
-  .navbar {
-    position: relative;
-    z-index: 2;
-    position: sticky;
-  }
-
   .navbar ul {
-    position: fixed;
     width: 100%;
-    height: 3em;
     display: flex;
     flex-direction: column;
+    height: 5em;
   }
 
   /* position icon */

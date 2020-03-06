@@ -12,14 +12,17 @@
     contact = document.getElementById('contact'),
     navUL = document.getElementById('navUL');
 
+  /* ---------------------------------------------------------------- */
   // Slide in navbar, intro, on page load
   window.onload = () => {
     navbar.classList.add('show');
     intro.classList.add('show');
     projects.classList.add('show');
   };
+
+  /* ---------------------------------------------------------------- */
   // Fade in about and contact on scroll position
-  window.addEventListener('scroll', e => {
+  window.addEventListener('scroll', () => {
     let scrollPosition = this.scrollY;
     let bodyHeight = document.body.clientHeight;
     // roughly 1/3 of the way down
@@ -61,6 +64,7 @@
     }
   });
 
+  /* ---------------------------------------------------------------- */
   // This is necessary to remove the nav bar on mobile when a link is clicked.
   // Otherwise, the link doesn't get removed.
   navUL.addEventListener('click', e => {
@@ -68,6 +72,7 @@
     if (e.target.classList.contains('link')) {
       navbar.classList.remove('responsiveIn');
       navbar.classList.remove('liIn');
+      menubtn.classList.remove('rotate');
 
       // add responsive "out" classes, with li 300ms afterwards
       navbar.classList.add('responsiveOut');
@@ -79,6 +84,12 @@
       }, 401);
     }
   });
-  // account for navbar height when scroll-jumping on nav link click
-  window.addEventListener('hashchange', () => scrollBy(0, -80));
+
+  /* ---------------------------------------------------------------- */
+  // Smooth Scroll
+  const scroll = new SmoothScroll('a[href*="#"', {
+    header: '[data-scroll-header]',
+    speed: 500,
+    speedAsDuration: true
+  });
 })();
