@@ -23,10 +23,12 @@
   /* ---------------------------------------------------------------- */
   // Fade in about and contact on scroll position
   window.addEventListener('scroll', () => {
+    // Find position of top of scroll bar
     let scrollPosition = this.scrollY;
-    let bodyHeight = document.body.clientHeight;
+    // get height of client window
+    let bodyHeight = document.body.scrollHeight;
     // roughly 1/3 of the way down
-    if (scrollPosition >= parseInt(bodyHeight / 3.3)) {
+    if (scrollPosition >= parseInt(bodyHeight / 3.1)) {
       about.classList.add('show');
     }
     // roughly 3/4 of the way down
