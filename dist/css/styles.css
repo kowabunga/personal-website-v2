@@ -490,6 +490,11 @@ a.codelink:hover {
     color: var(--secondary-color);
   }
 
+  .box-container {
+    top: 2.5%;
+    transform: translateY(-2.5%);
+  }
+
   .container {
     padding-top: 4em;
   }
