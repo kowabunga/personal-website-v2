@@ -156,12 +156,15 @@ body * {
   grid-template-areas:
     'header header header'
     'title title title'
+    'hr hr hr'
     'nada icons nothing';
   padding: 20px;
   margin-bottom: 10em;
   transform: translateX(-100vw);
   transition: .8s ease-out;
+  text-align: center;
 }
+
 
 #intro.show {
   transform: translateX(0);
@@ -174,14 +177,21 @@ body * {
 
 #title {
   font-size: 2em;
-  margin-bottom: 2em;
   grid-area: title;
+}
+
+
+#hr1 {
+  grid-area: hr;
+  margin: 2em 0;
+  color: #fff;
 }
 
 #links {
   display: flex;
   grid-area: icons;
   justify-content: space-around;
+  margin: 0 auto;
   width: 125px;
 }
 
@@ -205,6 +215,11 @@ body * {
   margin-bottom: 10em;
   transform: translateX(200vw);
   transition: .8s ease-out;
+}
+
+#projects h1,
+#projects h3 {
+  text-align: center;
 }
 
 #projects.show {
@@ -255,7 +270,6 @@ body * {
 
 .webprojects img:hover {
   box-shadow: 0 1px 20px var(--secondary-color);
-
 }
 
 .livelink,
@@ -326,7 +340,7 @@ a.codelink:hover {
   margin-top: 2em;
   width: 80%;
   box-shadow: 0 1px 5px var(--secondary-color);
-  border-radius: 50%;
+  border-radius: 20%;
 }
 
 /* ---------------------------------------------------------------- */
@@ -371,7 +385,8 @@ a.codelink:hover {
 @media(max-width:1100px) {
   .webprojects {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'header nada'
+    grid-template-areas:
+      'header nada'
       'proj1 proj2'
       'proj3 proj4';
   }
@@ -500,11 +515,11 @@ a.codelink:hover {
   }
 
   #intro {
-    justify-self: start;
     font-size: 0.8em;
     grid-template-areas:
       'header'
       'title'
+      'hr'
       'icons';
     margin-bottom: 0;
   }
