@@ -10,14 +10,17 @@
     projects = document.getElementById('projects'),
     about = document.getElementById('about'),
     contact = document.getElementById('contact'),
-    navUL = document.getElementById('navUL');
+    navUL = document.getElementById('navUL'),
+    spinnyBox = document.querySelector('.box');
 
   /* ---------------------------------------------------------------- */
   // Slide in navbar, intro, on page load
-
-  navbar.classList.add('show');
-  intro.classList.add('show');
-  projects.classList.add('show');
+  setTimeout(() => {
+    spinnyBox.classList.add('hide');
+    navbar.classList.add('show');
+    intro.classList.add('show');
+    projects.classList.add('show');
+  }, 1000);
 
   /* ---------------------------------------------------------------- */
   // Fade in about and contact on scroll position
