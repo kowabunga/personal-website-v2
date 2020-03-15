@@ -66,32 +66,6 @@ body * {
 }
 
 /* ---------------------------------------------------------------- */
-/* spinny box */
-.box-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  position: absolute;
-  top: 10%;
-  transform: translateY(-10%);
-}
-
-.box {
-  width: 200px;
-  height: 200px;
-  border: 10px solid rgba(256, 256, 256, .4);
-  border-top-color: rgba(15, 53, 162, 1);
-  transition: .25s ease-out;
-  border-radius: 50%;
-  animation: spin .7s infinite linear;
-}
-
-.hide {
-  opacity: 0;
-  z-index: -1;
-}
-
-/* ---------------------------------------------------------------- */
 .navbar {
   transform: translateY(-7em);
   transition: .5s ease-out;
@@ -552,16 +526,5 @@ a.codelink:hover {
       'subheader'
       'form';
     margin-bottom: 0;
-  }
-}
-
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
   }
 }
