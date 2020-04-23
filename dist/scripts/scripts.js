@@ -10,18 +10,16 @@
     projects = document.getElementById('projects'),
     about = document.getElementById('about'),
     contact = document.getElementById('contact'),
-    navUL = document.getElementById('navUL'),
-    spinnyBox = document.querySelector('.box');
+    navUL = document.getElementById('navUL');
 
   /* ---------------------------------------------------------------- */
   // Slide in navbar, intro, on page load
-  setTimeout(() => {
-    spinnyBox.classList.add('hide');
+  window.addEventListener('load', () => {
     navbar.classList.add('show');
     intro.classList.add('show');
     projects.classList.add('show');
-  }, 1000);
-
+  });
+  
   /* ---------------------------------------------------------------- */
   // Fade in about and contact on scroll position
   window.addEventListener('scroll', () => {
@@ -94,6 +92,6 @@
   const scroll = new SmoothScroll('a[href*="#"', {
     header: '[data-scroll-header]',
     speed: 500,
-    speedAsDuration: true
+    speedAsDuration: true,
   });
 })();
