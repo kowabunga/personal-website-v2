@@ -208,7 +208,7 @@ body * {
 
 .webprojects {
   display: grid;
-  grid-gap: 30px 20px;
+  grid-gap: 2em 1.5em;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     'header header header'
@@ -228,9 +228,9 @@ body * {
   text-align: center;
   border-radius: 5px;
   font-size: 2em;
-  top: -7%;
+  top: -1em;
   left: 50%;
-  transform: translate(-50%, 7%);
+  transform: translateX(-50%);
   width: 90%;
 }
 
@@ -251,6 +251,7 @@ body * {
 }
 
 .webprojects img {
+  border-radius: 5px;
   margin-bottom: 0.8em;
   width: 100%;
   box-shadow: 0 1px 5px var(--secondary-color);
@@ -264,7 +265,7 @@ body * {
 .livelink,
 .codelink {
   display: block;
-  border-radius: 2px;
+  border-radius: 5px;
   padding: 8px;
   margin-bottom: 0.7em;
   text-align: center;
