@@ -133,7 +133,6 @@ body * {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  margin-bottom: 10em;
   transform: translateX(-100vw);
   transition: 0.8s ease-out;
   text-align: center;
@@ -214,12 +213,11 @@ body * {
 .webprojects {
   display: grid;
   grid-gap: 2em 1.5em;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
-    'header header header'
-    'subheader subheader subheader'
-    'proj1 proj2 proj3'
-    'proj4 . .';
+    'header header header header'
+    'subheader subheader subheader subheader'
+    'proj1 proj2 proj3 proj4';
 }
 
 .project {
@@ -261,10 +259,6 @@ body * {
   width: 100%;
   box-shadow: 0 1px 5px var(--secondary-color);
   transition: 0.4s;
-}
-
-.webprojects img:hover {
-  box-shadow: 0 1px 20px var(--secondary-color);
 }
 
 .livelink,
