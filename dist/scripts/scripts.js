@@ -11,7 +11,42 @@
     about = document.getElementById('about'),
     contact = document.getElementById('contact'),
     navUL = document.getElementById('navUL'),
-    body = document.body;
+    body = document.body,
+    nameInput = document.getElementById('name'),
+    emailInput = document.getElementById('email'),
+    companyInput = document.getElementById('company'),
+    messageInput = document.getElementById('message'),
+    nameLabel = document.getElementById('name-label'),
+    emailLabel = document.getElementById('email-label'),
+    companyLabel = document.getElementById('company-label'),
+    messageLabel = document.getElementById('message-label'),
+    formSubmit = document.getElementById('form-submit');
+
+  formSubmit.addEventListener('click', e => {
+    e.preventDefault();
+  });
+
+  const labelShow = e => {
+    const elem = e.target.id;
+    if (elem === 'name') {
+      nameLabel.classList.add('show');
+      nameInput.placeholder = '';
+    } else if (elem === 'email') {
+      emailLabel.classList.add('show');
+      emailInput.placeholder = '';
+    } else if (elem === 'company') {
+      companyLabel.classList.add('show');
+      companyInput.placeholder = '';
+    } else if (elem === 'message') {
+      messageLabel.classList.add('show');
+      messageInput.placeholder = '';
+    }
+  };
+
+  nameInput.addEventListener('click', labelShow);
+  emailInput.addEventListener('click', labelShow);
+  companyInput.addEventListener('click', labelShow);
+  messageInput.addEventListener('click', labelShow);
 
   /* ---------------------------------------------------------------- */
   // Slide in navbar, intro, on page load
@@ -42,14 +77,13 @@
     if (contactSec <= scrollPos / (3 / 2)) {
       contact.classList.add('show');
     }
-    console.log(projectSec, scrollPos);
   });
 
   /* ---------------------------------------------------------------- */
   // nav dropdown click
   menubtn.addEventListener('click', e => {
     if (!navbar.classList.contains('responsiveIn')) {
-      document.body.classList.add('no-overflow');
+      body.classList.add('no-overflow');
 
       menubtn.classList.add('rotate');
       navbar.classList.add('responsiveIn');
@@ -58,7 +92,7 @@
         navbar.classList.add('liIn');
       }, 300);
     } else {
-      document.body.classList.remove('no-overflow');
+      body.classList.remove('no-overflow');
 
       // remove responsive "in" classes
       menubtn.classList.remove('rotate');
@@ -73,7 +107,7 @@
   // Otherwise, the link doesn't get removed.
   navUL.addEventListener('click', e => {
     // remove responsive "in" classes and hamburger icon rotate class
-    document.body.classList.remove('no-overflow');
+    body.classList.remove('no-overflow');
 
     if (e.target.classList.contains('link')) {
       navbar.classList.remove('responsiveIn');

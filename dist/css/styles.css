@@ -355,11 +355,14 @@ a.codelink:hover {
   grid-template-columns: 1fr 1.5fr;
   grid-template-areas:
     'header form'
-    'header form'
-    '. form';
+    'header form';
   opacity: 0;
   transition: 0.8s ease-in;
   min-height: 100vh;
+}
+
+#contact-me-h2 {
+  font-size: 3em;
 }
 
 #contact.show {
@@ -370,10 +373,12 @@ a.codelink:hover {
   display: flex;
   flex-direction: column;
   grid-area: header;
+  padding-left: 1em;
 }
 
 #contactme {
   font-size: 6em;
+  margin-bottom: 0.5em;
 }
 
 #contactmesub {
@@ -381,6 +386,7 @@ a.codelink:hover {
 }
 
 #contactform {
+  position: relative;
   grid-area: form;
   margin: 0 auto;
   display: flex;
@@ -400,8 +406,42 @@ textarea::placeholder {
   color: #fff;
 }
 
+#name-label,
+#email-label,
+#company-label,
+#message-label {
+  position: absolute;
+  opacity: 0;
+  left: 84px;
+  transition: 0.2s ease-in;
+}
+
+#name-label {
+  top: 75px;
+}
+
+#email-label {
+  top: 200px;
+}
+
+#company-label {
+  top: 325px;
+}
+
+#message-label {
+  top: 450px;
+}
+
+#name-label.show,
+#email-label.show,
+#company-label.show,
+#message-label.show {
+  opacity: 1;
+}
+
 input,
 textarea {
+  margin-top: 1em;
   color: #fff;
   width: 75%;
   height: 2em;
@@ -417,18 +457,19 @@ textarea:focus {
 }
 
 button {
-  width: 8em;
-  height: 3em;
+  width: 12em;
+  height: 2.5em;
   font-size: 1em;
   cursor: pointer;
   background-color: var(--secondary-color);
   border: none;
   border-radius: 5px;
-  transition: 0.1s ease-in;
+  transition: 0.25s ease-in;
 }
 
 button:hover {
-  opacity: 0.9;
+  background-color: var(--link-active-color);
+  color: var(--secondary-color);
 }
 
 /* ---------------------------------------------------------------- */

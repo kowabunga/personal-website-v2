@@ -198,33 +198,43 @@
           </h3>
         </div>
         <form method="POST" data-netlify="true" id="contactform">
+          <h2 id=contact-me-h2>Reach Out</h3>
+          <label for="name" id="name-label">Your Name</label>
           <input
             type="text"
             name="name"
             id="name"
-            placeholder="Enter your name..."
+            placeholder="Your Name"
             required
           />
-          <input
-            type="text"
-            name="company"
-            id="company"
-            placeholder="Company name (optional)"
-          />
+
+          <label for="email" id="email-label">Your Email</label>
           <input
             type="email"
             name="email"
             id="email"
-            placeholder="Enter your email..."
+            placeholder="Your Email"
             required
           />
+
+          <label for="company" id="company-label"
+            >Company/Organization (Optional)</label
+          >
+          <input
+            type="text"
+            name="company"
+            id="company"
+            placeholder="Company/Organization (Optional)"
+          />
+
+          <label for="message" id="message-label">Your Message</label>
           <textarea
             name="message"
             id="message"
-            placeholder="Enter your message..."
+            placeholder="Your Message"
             required
           ></textarea>
-          <button type="submit">Submit</button>
+          <button type="submit" id=form-submit>Send Your Message</button>
         </form>
       </section>
     </div>
