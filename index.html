@@ -46,7 +46,7 @@
       <!-- frontpage -->
       <section id="intro">
         <div>
-          <h1 id="name">Anthony Siletti</h1>
+          <h1 id="my-name">Anthony Siletti</h1>
           <h3 id="title">Front End Web Developer</h3>
           <hr id="hr1" />
           <div id="links">
@@ -195,11 +195,35 @@
         <h3 id="contactmesub">
           Feel free to use the form and I will respond as soon as possible
         </h3>
-        <iframe
-          id="contactform"
-          src="https://docs.google.com/forms/d/e/1FAIpQLScdtspKBKHnybParCdsWLweoIGKpwHIuWHuw2OuHAwxGo4hGQ/viewform?embedded=true"
-          >Loading…</iframe
-        >
+        <form method="POST" data-netlify="true" id="contactform">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name..."
+            required
+          />
+          <input
+            type="text"
+            name="company"
+            id="company"
+            placeholder="Company name (optional)"
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email..."
+            required
+          />
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Enter your message..."
+            required
+          ></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </form>
       </section>
     </div>
 
