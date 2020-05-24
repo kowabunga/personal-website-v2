@@ -213,11 +213,12 @@ body * {
 .webprojects {
   display: grid;
   grid-gap: 2em 1.5em;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
-    'header header header header'
-    'subheader subheader subheader subheader'
-    'proj1 proj2 proj3 proj4';
+    'header header header '
+    'subheader subheader subheader '
+    'proj1 proj2 proj3 '
+    ' proj4 . .';
 }
 
 .project {
