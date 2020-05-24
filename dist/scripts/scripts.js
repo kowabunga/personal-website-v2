@@ -29,17 +29,17 @@
       contactSec = contact.getBoundingClientRect().top,
       scrollPos = window.innerHeight;
 
-    // if the position of the top of the section in question (projecsec, aboutsec, contactsec) is less than or equal to half the height of the window (i.e., it is in the middle of the window), add show class to make it visible
+    // if the position of the top of the section in question (projecsec, aboutsec, contactsec) is less than or equal to half  or 2/3 the height of the window (i.e., it is in the middle of the window), add show class to make it visible
     // Initially, on a standard 1920x1080p screen, these sections have a greater top value than the window height
     if (projectSec <= scrollPos / 2) {
       projects.classList.add('show');
     }
 
-    if (aboutSec <= scrollPos / 2) {
+    if (aboutSec <= scrollPos / (3 / 2)) {
       about.classList.add('show');
     }
 
-    if (contactSec <= scrollPos / 2) {
+    if (contactSec <= scrollPos / (3 / 2)) {
       contact.classList.add('show');
     }
     console.log(projectSec, scrollPos);

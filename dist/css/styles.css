@@ -191,6 +191,7 @@ body * {
   opacity: 0;
   transition: 0.8s ease-in;
   min-height: 100vh;
+  margin-bottom: 12em;
 }
 
 #projects h1,
