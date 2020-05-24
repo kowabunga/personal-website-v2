@@ -31,8 +31,6 @@ html {
   color: var(--secondary-color);
   position: relative;
   min-height: 100%;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 body::after {
@@ -50,6 +48,9 @@ body * {
   z-index: 1;
 }
 
+.no-overflow {
+  overflow: hidden;
+}
 /* ---------------------------------------------------------------- */
 /* main container */
 .container {
@@ -63,7 +64,6 @@ body * {
     'contact';
   padding-top: 5em;
 }
-
 /* ---------------------------------------------------------------- */
 .hide {
   opacity: 0;
@@ -72,8 +72,8 @@ body * {
 
 /* ---------------------------------------------------------------- */
 .navbar {
-  transform: translateY(-7em);
-  transition: 0.5s ease-out;
+  opacity: 0;
+  transition: 0.8s ease-in;
   position: fixed;
   width: 100%;
   top: 0;
@@ -83,7 +83,7 @@ body * {
 }
 
 .navbar.show {
-  transform: translateY(0);
+  opacity: 1;
 }
 
 /* nav bar */
@@ -93,6 +93,7 @@ body * {
   align-items: center;
   justify-content: flex-end;
   height: 4em;
+  transition: 0.4s ease-in;
 }
 
 .navbar li {
@@ -133,8 +134,8 @@ body * {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  transform: translateX(-100vw);
-  transition: 0.8s ease-out;
+  opacity: 0;
+  transition: 0.8s ease-in;
   text-align: center;
   min-height: 100vh;
   width: 80%;
@@ -146,7 +147,7 @@ body * {
 }
 
 #intro.show {
-  transform: translateX(0);
+  opacity: 1;
 }
 
 #name {
@@ -184,12 +185,11 @@ body * {
 /* ---------------------------------------------------------------- */
 /* portfolio */
 #projects {
+  grid-area: projects;
   padding: 20px;
   text-shadow: 1px 2px 2px solid;
-  grid-area: projects;
-  margin-bottom: 10em;
-  transform: translateX(200vw);
-  transition: 0.8s ease-out;
+  opacity: 0;
+  transition: 0.8s ease-in;
   min-height: 100vh;
 }
 
@@ -199,7 +199,7 @@ body * {
 }
 
 #projects.show {
-  transform: translateX(0);
+  opacity: 1;
 }
 
 #myproj {
@@ -299,14 +299,14 @@ a.codelink:hover {
 /* About */
 #about {
   grid-area: about;
-  padding: 20px;
+  padding: 0 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     'pic name '
     'pic about';
   opacity: 0;
-  transition: opacity 0.8s ease-out;
+  transition: 0.8s ease-in;
   min-height: 100vh;
 }
 
@@ -353,9 +353,10 @@ a.codelink:hover {
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     'header form'
-    'subheader form';
+    'subheader form'
+    '. form';
   opacity: 0;
-  transition: opacity 0.8s ease-in;
+  transition: 0.8s ease-in;
   min-height: 100vh;
 }
 
@@ -412,6 +413,9 @@ a.codelink:hover {
 }
 
 @media (max-width: 590px) {
+  .container {
+    grid-gap: 2em 0;
+  }
   .navbar ul {
     width: 100%;
     display: flex;
@@ -456,42 +460,21 @@ a.codelink:hover {
   }
 
   /* responsiveIn classes add animation nav ul dropdown appearance
-     responsiveOut classes do the reverse
   */
   .navbar.responsiveIn ul {
     justify-content: space-evenly;
     height: 100vh;
     transition: 0.4s ease-in;
-    transition-duration: 0.4s;
   }
-
-  .navbar.responsiveOut ul {
-    height: 3em;
-    transition: 0.4s ease-out;
-  }
-
-  /* every other li comes in from the opposite side */
-  .navbar li:nth-child(odd) {
+  .navbar li {
     opacity: 0;
-    transform: translateX(-100vw);
-  }
-
-  .navbar li:nth-child(even) {
-    opacity: 0;
-    transform: translateX(100vw);
+    transform: 0.3s ease-in;
   }
 
   /* liIn classes add animation link appearance
-     liOut classes do the reverse
   */
   .navbar.liIn li {
     opacity: 1;
-    transition: 0.3s ease-in;
-    transform: translateX(0);
-  }
-
-  .navbar.liOut li {
-    opacity: 0;
     transition: 0.3s ease-in;
   }
 
