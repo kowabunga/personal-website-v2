@@ -417,19 +417,19 @@ textarea::placeholder {
 }
 
 #name-label {
-  top: 175px;
+  top: 130px;
 }
 
 #email-label {
-  top: 280px;
+  top: 214px;
 }
 
 #company-label {
-  top: 385px;
+  top: 295px;
 }
 
 #message-label {
-  top: 490px;
+  top: 375px;
 }
 
 #name-label.show,
@@ -449,6 +449,10 @@ textarea {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid var(--secondary-color);
+}
+textarea {
+  height: 12em;
+  resize: none;
 }
 
 /* overly complicated way to get rid of those ridiculously hideous form auto fill background colors on webkit browsers, anyway*/
