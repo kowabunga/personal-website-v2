@@ -19,12 +19,7 @@
     nameLabel = document.getElementById('name-label'),
     emailLabel = document.getElementById('email-label'),
     companyLabel = document.getElementById('company-label'),
-    messageLabel = document.getElementById('message-label'),
-    formSubmit = document.getElementById('form-submit');
-
-  formSubmit.addEventListener('click', e => {
-    e.preventDefault();
-  });
+    messageLabel = document.getElementById('message-label');
 
   const labelShow = e => {
     const elem = e.target.id;
