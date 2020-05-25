@@ -393,8 +393,8 @@ a.codelink:hover {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  height: 45em;
   width: 60%;
-  height: 75%;
   background-color: var(--primary-color);
   color: var(--secondary-color);
   border-radius: 20px;
@@ -449,10 +449,13 @@ textarea {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid var(--secondary-color);
+  padding: 0.5em;
 }
 textarea {
   height: 12em;
   resize: none;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
 }
 
 /* overly complicated way to get rid of those ridiculously hideous form auto fill background colors on webkit browsers, anyway*/
@@ -511,7 +514,6 @@ button:hover {
 
   #contactform {
     margin-top: 1em;
-    height: 45em;
   }
 }
 

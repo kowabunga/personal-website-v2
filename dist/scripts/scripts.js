@@ -23,6 +23,7 @@
 
   const labelShow = e => {
     const elem = e.target.id;
+    console.log(elem);
     if (elem === 'name') {
       nameLabel.classList.add('show');
       nameInput.placeholder = '';
