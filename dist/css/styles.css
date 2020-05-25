@@ -351,11 +351,8 @@ a.codelink:hover {
 #contact {
   grid-area: contact;
   padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  grid-template-areas:
-    'header form'
-    'header form';
+  display: flex;
+  flex-direction: column;
   opacity: 0;
   transition: 0.8s ease-in;
   min-height: 100vh;
@@ -374,15 +371,17 @@ a.codelink:hover {
   flex-direction: column;
   grid-area: header;
   padding-left: 1em;
+  text-align: center;
 }
 
 #contactme {
   font-size: 6em;
-  margin-bottom: 0.5em;
+  margin: 0 auto 0.5em auto;
 }
 
 #contactmesub {
   font-size: 2em;
+  margin: 0 auto 1em auto;
 }
 
 #contactform {
@@ -395,6 +394,7 @@ a.codelink:hover {
   justify-content: space-evenly;
   height: 45em;
   width: 60%;
+  max-width: 670px;
   background-color: var(--primary-color);
   color: var(--secondary-color);
   border-radius: 20px;
@@ -504,14 +504,6 @@ button:hover {
       'proj3 proj4';
   }
 
-  #contact {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      'header'
-      'subheader'
-      'form';
-  }
-
   #contactform {
     margin-top: 1em;
   }
@@ -524,7 +516,9 @@ button:hover {
       'name'
       'about'
       'pic';
+    margin-bottom: 10em;
   }
+
   #contactform {
     width: 80%;
   }
@@ -621,7 +615,7 @@ button:hover {
 
   #projects {
     font-size: 0.7em;
-    margin: 5em 0 0 0;
+    margin: 5em 0 10em 0;
   }
 
   .webprojects {
@@ -640,14 +634,6 @@ button:hover {
     font-size: 1.5em;
   }
 
-  #contact {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      'header'
-      'subheader'
-      'form';
-    margin-bottom: 0;
-  }
   #contactform {
     width: 90%;
   }
