@@ -22,10 +22,6 @@
 }
 
 /* ---------------------------------------------------------------- */
-html,
-body {
-  overflow-x: hidden;
-}
 
 /* html */
 html {
@@ -60,7 +56,7 @@ body * {
 /* main container */
 .container {
   display: grid;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   grid-template-columns: 1fr;
   grid-template-areas:
     'home'
@@ -532,6 +528,7 @@ button:hover {
 @media (max-width: 590px) {
   .container {
     grid-gap: 2em 0;
+    max-width: 100vw;
   }
   .navbar ul {
     width: 100%;
