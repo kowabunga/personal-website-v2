@@ -22,10 +22,6 @@
 }
 
 /* ---------------------------------------------------------------- */
-/* html,
-body {
-  overflow-x: hidden;
-} */
 
 /* html */
 html {
@@ -37,7 +33,7 @@ html {
   position: relative;
 }
 
-/* body::after {
+body::after {
   content: '';
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -45,7 +41,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-} */
+}
 
 /* body * applies to everything inside - put everyhing above the overlay*/
 body * {
@@ -58,14 +54,8 @@ body * {
 /* ---------------------------------------------------------------- */
 /* main container */
 .container {
-  display: grid;
-  margin-bottom: 3em;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    'home'
-    'projects'
-    'about'
-    'contact';
+  display: flex;
+  flex-direction: column;
   padding-top: 5em;
   width: 100%;
 }
@@ -134,7 +124,6 @@ body * {
 /* ---------------------------------------------------------------- */
 /* home page */
 #intro {
-  grid-area: home;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,7 +179,6 @@ body * {
 /* ---------------------------------------------------------------- */
 /* portfolio */
 #projects {
-  grid-area: projects;
   padding: 20px;
   text-shadow: 1px 2px 2px solid;
   opacity: 0;
@@ -305,7 +293,6 @@ a.codelink:hover {
 /* ---------------------------------------------------------------- */
 /* About */
 #about {
-  grid-area: about;
   padding: 0 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -354,7 +341,6 @@ a.codelink:hover {
 /* ---------------------------------------------------------------- */
 /* contact */
 #contact {
-  grid-area: contact;
   padding: 20px;
   display: flex;
   flex-direction: column;
