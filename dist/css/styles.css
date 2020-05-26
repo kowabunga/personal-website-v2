@@ -22,6 +22,11 @@
 }
 
 /* ---------------------------------------------------------------- */
+html,
+body {
+  overflow-x: hidden;
+}
+
 /* html */
 html {
   background: url('../img/colorful.jpg');
@@ -611,6 +616,10 @@ button:hover {
       'hr'
       'icons';
     margin-bottom: 0;
+  }
+
+  #intro div {
+    transform: scale(1);
   }
 
   #projects {
