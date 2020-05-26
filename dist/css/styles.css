@@ -22,6 +22,10 @@
 }
 
 /* ---------------------------------------------------------------- */
+/* html,
+body {
+  overflow-x: hidden;
+} */
 
 /* html */
 html {
@@ -31,10 +35,9 @@ html {
   background-position: top;
   color: var(--secondary-color);
   position: relative;
-  min-height: 100%;
 }
 
-body::after {
+/* body::after {
   content: '';
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -42,7 +45,7 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-}
+} */
 
 /* body * applies to everything inside - put everyhing above the overlay*/
 body * {
@@ -64,6 +67,7 @@ body * {
     'about'
     'contact';
   padding-top: 5em;
+  width: 100%;
 }
 /* ---------------------------------------------------------------- */
 .hide {
