@@ -60,7 +60,7 @@ body * {
 /* main container */
 .container {
   display: grid;
-  margin-bottom: 3em;
+  margin: 0 auto 0 auto;
   grid-template-columns: 1fr;
   grid-template-areas:
     'home'
