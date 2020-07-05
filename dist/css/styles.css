@@ -134,6 +134,7 @@ body * {
   min-height: 100vh;
   width: 80%;
   margin: 0 auto;
+  transform: translateX(-1vw);
 }
 
 #intro div {
@@ -142,6 +143,7 @@ body * {
 
 #intro.show {
   opacity: 1;
+  transform: translateX(0);
 }
 
 #my-name {
@@ -185,6 +187,7 @@ body * {
   transition: 0.8s ease-in;
   min-height: 100vh;
   margin-bottom: 12em;
+  transform: translateX(1vw);
 }
 
 #projects h1,
@@ -194,6 +197,7 @@ body * {
 
 #projects.show {
   opacity: 1;
+  transform: translateX(0);
 }
 
 #myproj {
@@ -212,7 +216,7 @@ body * {
     'header header header '
     'subheader subheader subheader '
     'proj1 proj2 proj3 '
-    ' proj4 . .';
+    '. proj4 .';
 }
 
 .project {
@@ -302,10 +306,12 @@ a.codelink:hover {
   opacity: 0;
   transition: 0.8s ease-in;
   min-height: 100vh;
+  transform: translateX(-1vw);
 }
 
 #about.show {
   opacity: 1;
+  transform: translateX(0);
 }
 
 #aboutname {
@@ -347,6 +353,7 @@ a.codelink:hover {
   opacity: 0;
   transition: 0.8s ease-in;
   min-height: 100vh;
+  transform: translateX(1vw);
 }
 
 #contact-me-h2 {
@@ -355,6 +362,7 @@ a.codelink:hover {
 
 #contact.show {
   opacity: 1;
+  transform: translateX(0);
 }
 
 #contact-info {
