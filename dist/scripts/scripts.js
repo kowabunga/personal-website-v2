@@ -10,30 +10,102 @@
     projects = document.getElementById('projects'),
     about = document.getElementById('about'),
     contact = document.getElementById('contact'),
-    navUL = document.getElementById('navUL');
+    navUL = document.getElementById('navUL'),
+    body = document.body,
+    nameInput = document.getElementById('name'),
+    emailInput = document.getElementById('email'),
+    companyInput = document.getElementById('company'),
+    messageInput = document.getElementById('message'),
+    nameLabel = document.getElementById('name-label'),
+    emailLabel = document.getElementById('email-label'),
+    companyLabel = document.getElementById('company-label'),
+    messageLabel = document.getElementById('message-label');
+
+  const labelShow = e => {
+    const elem = e.target.id;
+    console.log(elem);
+    if (elem === 'name') {
+      nameLabel.classList.add('show');
+      nameInput.placeholder = '';
+    } else if (elem === 'email') {
+      emailLabel.classList.add('show');
+      emailInput.placeholder = '';
+    } else if (elem === 'company') {
+      companyLabel.classList.add('show');
+      companyInput.placeholder = '';
+    } else if (elem === 'message') {
+      messageLabel.classList.add('show');
+      messageInput.placeholder = '';
+    }
+  };
+
+  nameInput.addEventListener('click', labelShow);
+  emailInput.addEventListener('click', labelShow);
+  companyInput.addEventListener('click', labelShow);
+  messageInput.addEventListener('click', labelShow);
 
   /* ---------------------------------------------------------------- */
   // Slide in navbar, intro, on page load
   window.addEventListener('load', () => {
     navbar.classList.add('show');
     intro.classList.add('show');
-    projects.classList.add('show');
   });
-  
+
   /* ---------------------------------------------------------------- */
   // Fade in about and contact on scroll position
   window.addEventListener('scroll', () => {
-    // Find position of top of scroll bar
-    let scrollPosition = this.scrollY;
-    // get height of client window
-    let bodyHeight = document.body.scrollHeight;
-    // roughly 1/3 of the way down
-    if (scrollPosition >= parseInt(bodyHeight / 3.1)) {
+    // get position of page sections relative to top left corner of browser
+    const introSec = intro.getBoundingClientRect(),
+      projectSec = projects.getBoundingClientRect(),
+      aboutSec = about.getBoundingClientRect(),
+      contactSec = contact.getBoundingClientRect(),
+      scrollPos = window.innerHeight;
+    console.log(scrollPos);
+
+    // if the position of the top of the section in question (projecsec, aboutsec, contactsec) is less than or equal to half  or 2/3 the height of the window (i.e., it is in the middle of the window), add show class to make it visible
+    // Initially, on a standard 1920x1080p screen, these sections have a greater top value than the window height
+
+    if (
+      (introSec.top <= scrollPos / (3 / 2) && introSec.bottom > scrollPos) ||
+      (introSec.top < 0 && introSec.bottom >= scrollPos / (3 / 1))
+    ) {
+      intro.classList.add('show');
+    }
+
+    if (
+      (projectSec.top <= scrollPos / (3 / 2) &&
+        projectSec.bottom > scrollPos) ||
+      (projectSec.top < 0 && projectSec.bottom >= scrollPos / (3 / 1))
+    ) {
+      projects.classList.add('show');
+    }
+
+    if (
+      (aboutSec.top <= scrollPos / (3 / 2) && aboutSec.bottom > scrollPos) ||
+      (aboutSec.top < 0 && aboutSec.bottom >= scrollPos / (3 / 1))
+    ) {
       about.classList.add('show');
     }
-    // roughly 3/4 of the way down
-    if (scrollPosition >= parseInt(bodyHeight / 3 + bodyHeight * 0.25)) {
+
+    if (contactSec.top <= scrollPos / (3 / 2)) {
       contact.classList.add('show');
+    }
+
+    // Remove show class when page section goes visible browser window
+    if (introSec.bottom < scrollPos / (3 / 1)) {
+      intro.classList.remove('show');
+    }
+
+    if (projectSec.bottom < 0 || projectSec.top > scrollPos - 25) {
+      projects.classList.remove('show');
+    }
+
+    if (aboutSec.bottom < 0 || aboutSec.top > scrollPos - 25) {
+      about.classList.remove('show');
+    }
+
+    if (contactSec.bottom < 0 || contactSec.top > scrollPos - 25) {
+      contact.classList.remove('show');
     }
   });
 
@@ -41,28 +113,22 @@
   // nav dropdown click
   menubtn.addEventListener('click', e => {
     if (!navbar.classList.contains('responsiveIn')) {
+      body.classList.add('no-overflow');
+
       menubtn.classList.add('rotate');
       navbar.classList.add('responsiveIn');
-      // add li in class 300 ms into nav bar scroll down
       // Ensures the nav bar has "opened" all the way before the links appear
       setTimeout(() => {
         navbar.classList.add('liIn');
       }, 300);
     } else {
+      body.classList.remove('no-overflow');
+
       // remove responsive "in" classes
       menubtn.classList.remove('rotate');
-
-      navbar.classList.remove('responsiveIn');
+      // navbar.classList.remove('responsiveIn');
       navbar.classList.remove('liIn');
-
-      // add responsive "out" classes, with li 300ms afterwards
-      navbar.classList.add('responsiveOut');
-      navbar.classList.add('liOut');
-
-      setTimeout(() => {
-        navbar.classList.remove('responsiveOut');
-        navbar.classList.remove('liOut');
-      }, 401);
+      navbar.classList.remove('responsiveIn');
     }
   });
 
@@ -70,20 +136,13 @@
   // This is necessary to remove the nav bar on mobile when a link is clicked.
   // Otherwise, the link doesn't get removed.
   navUL.addEventListener('click', e => {
-    // remove responsive "in" classes
+    // remove responsive "in" classes and hamburger icon rotate class
+    body.classList.remove('no-overflow');
+
     if (e.target.classList.contains('link')) {
       navbar.classList.remove('responsiveIn');
       navbar.classList.remove('liIn');
       menubtn.classList.remove('rotate');
-
-      // add responsive "out" classes, with li 300ms afterwards
-      navbar.classList.add('responsiveOut');
-      navbar.classList.add('liOut');
-
-      setTimeout(() => {
-        navbar.classList.remove('responsiveOut');
-        navbar.classList.remove('liOut');
-      }, 401);
     }
   });
 

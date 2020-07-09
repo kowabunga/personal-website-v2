@@ -24,7 +24,7 @@
           <a href="#intro" class="link">Home</a>
         </li>
         <li>
-          <a href="#projects" class="link">Portfolio</a>
+          <a href="#projects" class="link">Projects</a>
         </li>
         <li>
           <a href="#about" class="link">About</a>
@@ -45,18 +45,20 @@
       <!-- ---------------------------------------------------------------- -->
       <!-- frontpage -->
       <section id="intro">
-        <h1 id="name">Anthony Siletti</h1>
-        <h3 id="title">Front End Web Developer</h3>
-        <hr id="hr1" />
-        <div id="links">
-          <a href="https://github.com/kowabunga" target="_blank">
-            <i id="giticon" class="fab fa-github-square fa-3x button"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/anthony-siletti-b26568178/"
-            target="_blank"
-            ><i id="linkedicon" class="fab fa-linkedin fa-3x button"></i
-          ></a>
+        <div>
+          <h1 id="my-name">Anthony Siletti</h1>
+          <h3 id="title">Front End Web Developer</h3>
+          <hr id="hr1" />
+          <div id="links">
+            <a href="https://github.com/kowabunga" target="_blank">
+              <i id="giticon" class="fab fa-github-square fa-3x button"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/anthony-siletti-b26568178/"
+              target="_blank"
+              ><i id="linkedicon" class="fab fa-linkedin fa-3x button"></i
+            ></a>
+          </div>
         </div>
       </section>
       <!-- projects -->
@@ -67,14 +69,9 @@
           <!-- ---------------------------------------------------------------- -->
           <!-- in order: Link to live with image, link to live, link to code -->
           <div class="proj1 project">
-            <a
-              class="main-pic"
-              href="https://kowabunga.github.io/next-best-thing-react/"
-              target="_blank"
-            >
-              <div class="project-title">The Next Big Thing</div>
-              <img src="dist/img/nbd.jpg" alt="Next Best Thing Landing Page"
-            /></a>
+            <div class="project-title">The Next Big Thing</div>
+
+            <img src="dist/img/nbd.jpg" alt="Next Best Thing Landing Page" />
 
             <a
               class="livelink"
@@ -96,10 +93,9 @@
           <!-- ---------------------------------------------------------------- -->
           <!-- in order: Link to live with image, link to live, link to code -->
           <div class="proj2 project">
-            <a href="https://kowabunga.github.io/MyTube/" target="_blank">
-              <img src="dist/img/mt.jpg" alt="Cooking With Sam" />
-              <div class="project-title">MyTube</div>
-            </a>
+            <div class="project-title">MyTube</div>
+
+            <img src="dist/img/mt.jpg" alt="Cooking With Sam" />
 
             <a
               class="livelink"
@@ -120,13 +116,9 @@
           <!-- ---------------------------------------------------------------- -->
           <!-- in order: Link to live with image, link to live, link to code -->
           <div class="proj3 project">
-            <a
-              href="https://kowabunga.github.io/Personalized-Home-Page/"
-              target="_blank"
-            >
-              <img src="dist/img/phps.jpg" alt="Personal Home Page" />
-              <div class="project-title">Personal Home Page</div>
-            </a>
+            <div class="project-title">Personal Home Page</div>
+
+            <img src="dist/img/phps.jpg" alt="Personal Home Page" />
 
             <a
               class="livelink"
@@ -147,13 +139,9 @@
           <!-- ---------------------------------------------------------------- -->
           <!-- in order: Link to live with image, link to live, link to code -->
           <div class="proj4 project">
-            <a
-              href="https://kowabunga.github.io/Restaurant-Server-Order-Input/"
-              target="_blank"
-            >
-              <img src="dist/img/rsoi.jpg" alt="Personal Home Page" />
-              <div class="project-title">Restaurant Server Login</div>
-            </a>
+            <div class="project-title">Restaurant Server Login</div>
+
+            <img src="dist/img/rsoi.jpg" alt="Personal Home Page" />
 
             <a
               class="livelink"
@@ -176,28 +164,78 @@
 
       <!-- about me -->
       <section id="about">
-        <h1 id="aboutname">About Me</h1>
-        <p id="aboutme">
-          My name is Anthony Siletti. I'm a college grad with web development in
-          mind. From New York City, my focus towards the end of my college career
-          became web developement with a penchant for expanding my skillset. A
-          few of the skills you'll see in this portfolio include CSS, SASS,
-          JavaScript and Git.
-        </p>
         <img id="picture" src="dist/img/me.jpg" alt="" />
+        <div id="about-info">
+          <h1 id="aboutname">About</h1>
+          <p id="aboutme">
+            My name is Anthony Siletti. Having completed my Bachelors of Science
+            in Computer Science at John Jay College (CUNY), I've set my mind on a
+            career in web development. From New York City, my focus towards the
+            end of my college career became web developement with a penchant for
+            expanding my skillset. A few of the skills you'll see in this
+            portfolio include:
+          </p>
+          <!-- CSS, SASS, JavaScript and React. -->
+          <div id="aboutskills">
+            <ul>
+              <li>CSS</li>
+              <li>SASS</li>
+            </ul>
+            <ul>
+              <li>JavaScript</li>
+              <li>React</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <!-- contact -->
       <section id="contact">
-        <h1 id="contactme">Want To Get In Touch?</h1>
-        <h3 id="contactmesub">
-          Feel free to use the form and I will respond as soon as possible
-        </h3>
-        <iframe
-          id="contactform"
-          src="https://docs.google.com/forms/d/e/1FAIpQLScdtspKBKHnybParCdsWLweoIGKpwHIuWHuw2OuHAwxGo4hGQ/viewform?embedded=true"
-          >Loading…</iframe
-        >
+        <div id="contact-info">
+          <h1 id="contactme">Want To Get In Touch?</h1>
+          <h3 id="contactmesub">
+            Feel free to use the form and I will respond as soon as possible
+          </h3>
+        </div>
+        <form method="POST" data-netlify="true" id="contactform">
+          <h2 id=contact-me-h2>Reach Out</h3>
+          <label for="name" id="name-label">Your Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your Name"
+            required
+          />
+
+          <label for="email" id="email-label">Your Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email"
+            required
+          />
+
+          <label for="company" id="company-label"
+            >Company/Organization (Optional)</label
+          >
+          <input
+            type="text"
+            name="company"
+            id="company"
+            placeholder="Company/Organization (Optional)"
+          />
+
+          <label for="message" id="message-label">Your Message</label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" id=form-submit>Send Your Message</button>
+        </form>
       </section>
     </div>
 
