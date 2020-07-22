@@ -252,12 +252,38 @@ body * {
   grid-area: proj4;
 }
 
-.webprojects img {
+.webprojects .proj-image-1,
+.webprojects .proj-image-2,
+.webprojects .proj-image-3,
+.webprojects .proj-image-4 {
   border-radius: 5px;
   margin-bottom: 0.8em;
-  width: 100%;
+  height: 400px;
+  width: 610px;
   box-shadow: 0 1px 5px var(--secondary-color);
   transition: 0.4s;
+}
+
+.proj-image-1,
+.proj-image-2,
+.proj-image-3,
+.proj-image-4 {
+  background-image: url('../img/nbd.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.proj-image-2 {
+  background-image: url('../img/mt.jpg');
+}
+
+.proj-image-3 {
+  background-image: url('../img/phps.jpg');
+}
+
+.proj-image-4 {
+  background-image: url('../img/rsoi.jpg');
 }
 
 .livelink,
