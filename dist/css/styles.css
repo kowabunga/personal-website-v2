@@ -134,6 +134,7 @@ body * {
   min-height: 100vh;
   width: 80%;
   margin: 0 auto;
+  transform: translateX(-1vw);
 }
 
 #intro div {
@@ -142,6 +143,7 @@ body * {
 
 #intro.show {
   opacity: 1;
+  transform: translateX(0);
 }
 
 #my-name {
@@ -185,6 +187,7 @@ body * {
   transition: 0.8s ease-in;
   min-height: 100vh;
   margin-bottom: 12em;
+  transform: translateX(1vw);
 }
 
 #projects h1,
@@ -194,6 +197,7 @@ body * {
 
 #projects.show {
   opacity: 1;
+  transform: translateX(0);
 }
 
 #myproj {
@@ -248,38 +252,12 @@ body * {
   grid-area: proj4;
 }
 
-.webprojects .proj-image-1,
-.webprojects .proj-image-2,
-.webprojects .proj-image-3,
-.webprojects .proj-image-4 {
+.webprojects img {
   border-radius: 5px;
   margin-bottom: 0.8em;
-  height: 400px;
-  width: 610px;
+  width: 100%;
   box-shadow: 0 1px 5px var(--secondary-color);
   transition: 0.4s;
-}
-
-.proj-image-1,
-.proj-image-2,
-.proj-image-3,
-.proj-image-4 {
-  background-image: url('../img/nbd.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.proj-image-2 {
-  background-image: url('../img/mt.jpg');
-}
-
-.proj-image-3 {
-  background-image: url('../img/phps.jpg');
-}
-
-.proj-image-4 {
-  background-image: url('../img/rsoi.jpg');
 }
 
 .livelink,
@@ -328,10 +306,12 @@ a.codelink:hover {
   opacity: 0;
   transition: 0.8s ease-in;
   min-height: 100vh;
+  transform: translateX(-1vw);
 }
 
 #about.show {
   opacity: 1;
+  transform: translateX(0);
 }
 
 #aboutname {
@@ -373,6 +353,7 @@ a.codelink:hover {
   opacity: 0;
   transition: 0.8s ease-in;
   min-height: 100vh;
+  transform: translateX(1vw);
 }
 
 #contact-me-h2 {
@@ -381,6 +362,7 @@ a.codelink:hover {
 
 #contact.show {
   opacity: 1;
+  transform: translateX(0);
 }
 
 #contact-info {
