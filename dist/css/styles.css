@@ -666,6 +666,10 @@ button:hover {
     margin: 5em 0 10em 0;
   }
 
+  .project {
+    margin: 50px 0;
+  }
+
   .proj-info {
     font-size: 1.3em;
   }
