@@ -1,7 +1,4 @@
 (function main() {
-  // get constant update for year
-  document.getElementById('year').innerHTML = new Date().getFullYear();
-
   /* ---------------------------------------------------------------- */
   //dropdown toggle
   const menubtn = document.getElementById('menubtn'),
