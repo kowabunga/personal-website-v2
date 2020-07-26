@@ -20,7 +20,6 @@
 
   const labelShow = e => {
     const elem = e.target.id;
-    console.log(elem);
     if (elem === 'name') {
       nameLabel.classList.add('show');
       nameInput.placeholder = '';
@@ -57,7 +56,6 @@
       aboutSec = about.getBoundingClientRect(),
       contactSec = contact.getBoundingClientRect(),
       scrollPos = window.innerHeight;
-    console.log(scrollPos);
 
     // if the position of the top of the section in question (projecsec, aboutsec, contactsec) is less than or equal to half  or 2/3 the height of the window (i.e., it is in the middle of the window), add show class to make it visible
     // Initially, on a standard 1920x1080p screen, these sections have a greater top value than the window height
