@@ -224,7 +224,7 @@ body * {
 .project {
   position: relative;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1.5fr 1.25fr;
   grid-template-areas:
     'image info'
     'toolsandlink toolsandlink';
