@@ -131,7 +131,8 @@ body * {
 #intro {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-direction: column;
   padding: 20px;
   opacity: 0;
   transition: 0.8s ease-in;
@@ -139,7 +140,7 @@ body * {
   min-height: 100vh;
   width: 80%;
   margin: 0 auto;
-  transform: translateX(-1vw);
+  transform: translateX(-0.35vw);
 }
 
 #intro div {
@@ -183,6 +184,17 @@ body * {
   color: var(--link-active-color);
 }
 
+#down-icon {
+  position: absolute;
+  bottom: 10px;
+}
+
+.fas.fa-chevron-down {
+  animation: jumpy 1.75s linear 0.8s infinite;
+  opacity: 0;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
 /* ---------------------------------------------------------------- */
 /* portfolio */
 #projects {
@@ -192,7 +204,7 @@ body * {
   transition: 0.8s ease-in;
   min-height: 100vh;
   margin-bottom: 12em;
-  transform: translateX(1vw);
+  transform: translateX(0.35vw);
 }
 
 #projects h1,
@@ -228,6 +240,7 @@ body * {
   grid-template-areas:
     'image info'
     'toolsandlink toolsandlink';
+  grid-auto-rows: min-content auto;
   background-color: var(--primary-color);
   border-radius: 5px;
   width: 37.5rem;
@@ -257,9 +270,13 @@ body * {
 
 .proj-info {
   grid-area: info;
+  height: 254.11px;
   padding: 20px 10px;
   line-height: 1.5;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .proj-tools {
@@ -342,7 +359,7 @@ a.codelink:hover {
   opacity: 0;
   transition: 0.8s ease-in;
   min-height: 100vh;
-  transform: translateX(-1vw);
+  transform: translateX(-0.35vw);
 }
 
 #about.show {
@@ -404,7 +421,7 @@ a.codelink:hover {
   opacity: 0;
   transition: 0.8s ease-in;
   min-height: 100vh;
-  transform: translateX(1vw);
+  transform: translateX(0.35vw);
 }
 
 #contact-me-h2 {
@@ -540,6 +557,22 @@ button {
 button:hover {
   background-color: var(--link-active-color);
   color: var(--secondary-color);
+}
+
+/* Animations */
+@keyframes jumpy {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
 }
 
 /* ---------------------------------------------------------------- */
