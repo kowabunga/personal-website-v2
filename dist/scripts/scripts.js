@@ -85,23 +85,6 @@
     if (contactSec.top <= scrollPos / (3 / 2)) {
       contact.classList.add('show');
     }
-
-    // Remove show class when page section goes visible browser window
-    if (introSec.bottom < scrollPos / (3 / 1)) {
-      intro.classList.remove('show');
-    }
-
-    if (projectSec.bottom < 0 || projectSec.top > scrollPos - 25) {
-      projects.classList.remove('show');
-    }
-
-    if (aboutSec.bottom < 0 || aboutSec.top > scrollPos - 25) {
-      about.classList.remove('show');
-    }
-
-    if (contactSec.bottom < 0 || contactSec.top > scrollPos - 25) {
-      contact.classList.remove('show');
-    }
   });
 
   /* ---------------------------------------------------------------- */
