@@ -84,6 +84,9 @@ body * {
 
 .navbar.show {
   opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* nav bar */
@@ -115,6 +118,36 @@ body * {
 .navbar .icon {
   display: none;
 }
+
+#resume-holder {
+  width: 125px;
+  padding: 5px;
+  height: 40px;
+  background-color: var(--secondary-color);
+  padding: 0 10px;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+#resume-holder.show {
+  position: absolute;
+  top: 12px;
+  z-index: 25;
+}
+
+#resume-link {
+  text-decoration: none;
+  margin-left: 5px;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+/* #resume-link:hover {
+  color: var(--secondary-color);
+} */
 
 #footer {
   font-size: 1.5em;
@@ -192,7 +225,6 @@ body * {
 .fas.fa-chevron-down {
   animation: jumpy 1.75s linear 0.8s infinite;
   opacity: 0;
-  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 /* ---------------------------------------------------------------- */
@@ -328,22 +360,19 @@ body * {
   box-shadow: 0 0 8px var(--secondary-color);
   font-size: 1.3em;
   width: 47%;
-}
-
-.livelink,
-.codelink {
   background-color: var(--secondary-color-transparent);
-  color: black;
+  color: #000;
   transition: 0.4s;
 }
 
-a.livelink:hover {
+a.livelink:hover,
+a.codelink:hover,
+#resume-holder:hover {
   background-color: var(--link-active-color);
   color: var(--secondary-color);
 }
 
-a.codelink:hover {
-  background-color: var(--link-active-color);
+#resume-holder:hover #resume-link {
   color: var(--secondary-color);
 }
 

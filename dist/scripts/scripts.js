@@ -16,7 +16,8 @@
     nameLabel = document.getElementById('name-label'),
     emailLabel = document.getElementById('email-label'),
     companyLabel = document.getElementById('company-label'),
-    messageLabel = document.getElementById('message-label');
+    messageLabel = document.getElementById('message-label'),
+    resumeBtn = document.getElementById('resume-holder');
 
   const labelShow = e => {
     const elem = e.target.id;
@@ -68,8 +69,7 @@
     }
 
     if (
-      (projectSec.top <= scrollPos / (3 / 2) &&
-        projectSec.bottom > scrollPos) ||
+      (projectSec.top <= scrollPos / (3 / 2) && projectSec.bottom > scrollPos) ||
       (projectSec.top < 0 && projectSec.bottom >= scrollPos / (3 / 1))
     ) {
       projects.classList.add('show');
@@ -93,6 +93,8 @@
     if (!navbar.classList.contains('responsiveIn')) {
       body.classList.add('no-overflow');
 
+      resumeBtn.classList.add('show');
+
       menubtn.classList.add('rotate');
       navbar.classList.add('responsiveIn');
       // Ensures the nav bar has "opened" all the way before the links appear
@@ -107,6 +109,10 @@
       // navbar.classList.remove('responsiveIn');
       navbar.classList.remove('liIn');
       navbar.classList.remove('responsiveIn');
+
+      setTimeout(() => {
+        resumeBtn.classList.remove('show');
+      }, 401);
     }
   });
 
@@ -115,12 +121,16 @@
   // Otherwise, the link doesn't get removed.
   navUL.addEventListener('click', e => {
     // remove responsive "in" classes and hamburger icon rotate class
-    body.classList.remove('no-overflow');
 
     if (e.target.classList.contains('link')) {
       navbar.classList.remove('responsiveIn');
       navbar.classList.remove('liIn');
       menubtn.classList.remove('rotate');
+      body.classList.remove('no-overflow');
+
+      setTimeout(() => {
+        resumeBtn.classList.remove('show');
+      }, 401);
     }
   });
 
