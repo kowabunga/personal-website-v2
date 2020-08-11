@@ -337,6 +337,24 @@ body * {
   font-size: 1.2em;
 }
 
+.proj-tools #ul-holder {
+  display: flex;
+}
+
+.proj-tools #ul-holder ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 2em;
+  letter-spacing: 3px;
+  font-size: 1.2em;
+}
+
+.proj-tools #ul-holder ul li {
+  margin-top: 5px;
+}
+
 .proj-links {
   width: 100%;
   display: flex;
