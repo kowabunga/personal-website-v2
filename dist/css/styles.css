@@ -111,7 +111,7 @@ body * {
   transition: 0.4s;
 }
 
-.navbar a:hover {
+.navbar ul a:hover {
   color: var(--link-active-color);
 }
 
@@ -123,13 +123,15 @@ body * {
   width: 125px;
   padding: 5px;
   height: 40px;
-  background-color: var(--secondary-color);
-  padding: 0 10px;
+  background-color: transparent;
+  padding: 10px;
   margin-left: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 3px;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
 }
 
 #resume-holder.show {
@@ -138,16 +140,14 @@ body * {
   z-index: 25;
 }
 
-#resume-link {
-  text-decoration: none;
-  margin-left: 5px;
-  font-size: 1.5rem;
-  color: #000;
+#resume-holder i {
+  margin-right: 10px;
+  transform: scale(0.8);
 }
 
-/* #resume-link:hover {
-  color: var(--secondary-color);
-} */
+#resume-holder:hover {
+  color: var(--link-active-color);
+}
 
 #footer {
   font-size: 1.5em;
@@ -332,7 +332,6 @@ body * {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 2em;
   letter-spacing: 3px;
   font-size: 1.2em;
 }
@@ -384,13 +383,8 @@ body * {
 }
 
 a.livelink:hover,
-a.codelink:hover,
-#resume-holder:hover {
+a.codelink:hover {
   background-color: var(--link-active-color);
-  color: var(--secondary-color);
-}
-
-#resume-holder:hover #resume-link {
   color: var(--secondary-color);
 }
 
@@ -646,7 +640,7 @@ button:hover {
   }
 }
 
-@media (max-width: 590px) {
+@media (max-width: 800px) {
   .container {
     grid-gap: 2em 0;
   }
@@ -746,10 +740,16 @@ button:hover {
 
   .project {
     margin: 50px 0;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'info' 'toolsandlink';
   }
 
   .proj-info {
     font-size: 1.3em;
+  }
+
+  .proj-img {
+    display: none;
   }
 
   .livelink,
