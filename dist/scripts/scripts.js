@@ -7,7 +7,6 @@
     projects = document.getElementById('projects'),
     about = document.getElementById('about'),
     contact = document.getElementById('contact'),
-    navUL = document.getElementById('navUL'),
     body = document.body,
     nameInput = document.getElementById('name'),
     emailInput = document.getElementById('email'),
@@ -16,8 +15,7 @@
     nameLabel = document.getElementById('name-label'),
     emailLabel = document.getElementById('email-label'),
     companyLabel = document.getElementById('company-label'),
-    messageLabel = document.getElementById('message-label'),
-    resumeBtn = document.getElementById('resume-holder');
+    messageLabel = document.getElementById('message-label');
 
   const labelShow = e => {
     const elem = e.target.id;
@@ -42,13 +40,6 @@
   messageInput.addEventListener('click', labelShow);
 
   /* ---------------------------------------------------------------- */
-  // Slide in navbar, intro, on page load
-  window.addEventListener('load', () => {
-    navbar.classList.add('show');
-    intro.classList.add('show');
-  });
-
-  /* ---------------------------------------------------------------- */
   // Fade in about and contact on scroll position
   window.addEventListener('scroll', () => {
     // get position of page sections relative to top left corner of browser
@@ -69,7 +60,8 @@
     }
 
     if (
-      (projectSec.top <= scrollPos / (3 / 2) && projectSec.bottom > scrollPos) ||
+      (projectSec.top <= scrollPos / (3 / 2) &&
+        projectSec.bottom > scrollPos) ||
       (projectSec.top < 0 && projectSec.bottom >= scrollPos / (3 / 1))
     ) {
       projects.classList.add('show');
@@ -88,49 +80,20 @@
   });
 
   /* ---------------------------------------------------------------- */
-  // nav dropdown click
+  // navbar show
+
   menubtn.addEventListener('click', e => {
-    if (!navbar.classList.contains('responsiveIn')) {
-      body.classList.add('no-overflow');
-
-      resumeBtn.classList.add('show');
-
+    if (
+      !navbar.classList.contains('show') &&
+      !menubtn.classList.contains('rotate')
+    ) {
+      // body.classList.add('overlay');
+      navbar.classList.add('show');
       menubtn.classList.add('rotate');
-      navbar.classList.add('responsiveIn');
-      // Ensures the nav bar has "opened" all the way before the links appear
-      setTimeout(() => {
-        navbar.classList.add('liIn');
-      }, 300);
     } else {
-      body.classList.remove('no-overflow');
-
-      // remove responsive "in" classes
+      // body.classList.remove('overlay');
+      navbar.classList.remove('show');
       menubtn.classList.remove('rotate');
-      // navbar.classList.remove('responsiveIn');
-      navbar.classList.remove('liIn');
-      navbar.classList.remove('responsiveIn');
-
-      setTimeout(() => {
-        resumeBtn.classList.remove('show');
-      }, 401);
-    }
-  });
-
-  /* ---------------------------------------------------------------- */
-  // This is necessary to remove the nav bar on mobile when a link is clicked.
-  // Otherwise, the link doesn't get removed.
-  navUL.addEventListener('click', e => {
-    // remove responsive "in" classes and hamburger icon rotate class
-
-    if (e.target.classList.contains('link')) {
-      navbar.classList.remove('responsiveIn');
-      navbar.classList.remove('liIn');
-      menubtn.classList.remove('rotate');
-      body.classList.remove('no-overflow');
-
-      setTimeout(() => {
-        resumeBtn.classList.remove('show');
-      }, 401);
     }
   });
 

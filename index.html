@@ -19,14 +19,15 @@
     <!-- ---------------------------------------------------------------- -->
     <!-- nav bar -->
     <nav class="navbar" id="nav" data-scroll-header>
-      <a
-        href="https://drive.google.com/uc?export=download&id=1QUkpbJzPGMSje0AhTPYfg4GqtnUQkNi9"
-        target="_blank"
-        id="resume-holder"
-        ><i class="fas fa-file-download"></i> Resume</a
-      >
-
       <ul id="navUL">
+        <li>
+          <a
+            href="https://drive.google.com/uc?export=download&id=1QUkpbJzPGMSje0AhTPYfg4GqtnUQkNi9"
+            target="_blank"
+            id="resume-holder"
+            ><i class="fas fa-file-download"></i> Resume</a
+          >
+        </li>
         <li>
           <a href="#intro" class="link">Home</a>
         </li>
@@ -40,18 +41,19 @@
           <a href="#contact" class="link">Contact</a>
         </li>
       </ul>
-      <div class="icon" id="menubtn">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
     </nav>
+
+    <div class="icon" id="menubtn">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
     <!-- ---------------------------------------------------------------- -->
     <!-- container -->
     <div class="container">
       <!-- ---------------------------------------------------------------- -->
       <!-- frontpage -->
-      <section id="intro">
+      <section id="intro" class="show">
         <div>
           <h1 id="my-name">Anthony Siletti</h1>
           <h3 id="title">Full Stack Web Developer</h3>
@@ -332,11 +334,6 @@
     </div>
 
     <!-- ^ container ends ^ -->
-    <!-- ---------------------------------------------------------------- -->
-    <!-- footer -->
-    <footer id="footer">
-      <p>Copyright &copy; <span id="year"></span> Anthony Siletti</p>
-    </footer>
     <!-- ---------------------------------------------------------------- -->
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
