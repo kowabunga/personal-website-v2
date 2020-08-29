@@ -17,6 +17,10 @@
     companyLabel = document.getElementById('company-label'),
     messageLabel = document.getElementById('message-label');
 
+  window.addEventListener('load', () => {
+    intro.classList.add('show');
+  });
+
   const labelShow = e => {
     const elem = e.target.id;
     if (elem === 'name') {
@@ -87,11 +91,11 @@
       !navbar.classList.contains('show') &&
       !menubtn.classList.contains('rotate')
     ) {
-      // body.classList.add('overlay');
+      body.classList.add('overlay');
       navbar.classList.add('show');
       menubtn.classList.add('rotate');
     } else {
-      // body.classList.remove('overlay');
+      body.classList.remove('overlay');
       navbar.classList.remove('show');
       menubtn.classList.remove('rotate');
     }
