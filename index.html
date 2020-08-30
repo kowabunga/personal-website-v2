@@ -122,135 +122,6 @@
               </div>
             </div>
           </div>
-
-          <!-- ---------------------------------------------------------------- -->
-
-          <div class="project">
-            <div class="project-title">MyTube</div>
-            <img class="proj-img" src="dist/img/mt.jpg" alt="MyTube" />
-            <div class="proj-info">
-              A new take on a front-end for Youtube. Incorporates a minimalistic
-              design.
-              <br />
-            </div>
-            <div class="proj-tools">
-              <p>Tools Used</p>
-
-              <ul>
-                <li>SCSS</li>
-                <li>JavaScript</li>
-              </ul>
-
-              <div class="proj-links">
-                <a
-                  class="livelink"
-                  href="https://kowabunga.github.io/MyTube/"
-                  target="_blank"
-                  ><i id="projectslinkicon" class="fas fa-link fa-fw"></i> Live
-                  Version</a
-                >
-
-                <a
-                  class="codelink"
-                  href="https://github.com/kowabunga/MyTube"
-                  target="_blank"
-                  ><i id="projectsgithubicon" class="fab fa-github-square"> </i>
-                  View Code</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- ---------------------------------------------------------------- -->
-
-          <div class="project">
-            <div class="project-title">Image Searcher</div>
-            <img
-              class="proj-img"
-              src="dist/img/ais.jpg"
-              alt="Angular Image Searcher"
-            />
-            <div class="proj-info">
-              AngularImageSearcher is a single page application devoted to
-              making the process of searching for images across multiple open
-              source libaries quickly and easily.
-              <br />
-            </div>
-            <div class="proj-tools">
-              <p>Tools Used</p>
-
-              <ul>
-                <li>SCSS</li>
-                <li>Angular</li>
-                <li>TypeScript</li>
-              </ul>
-
-              <div class="proj-links">
-                <a
-                  class="livelink"
-                  href="https://kowabunga.github.io/angular-image-searcher/"
-                  target="_blank"
-                  ><i id="projectslinkicon" class="fas fa-link fa-fw"></i> Live
-                  Version</a
-                >
-
-                <a
-                  class="codelink"
-                  href="https://github.com/kowabunga/angular-image-searcher"
-                  target="_blank"
-                  ><i id="projectsgithubicon" class="fab fa-github-square"> </i>
-                  View Code</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- ---------------------------------------------------------------- -->
-
-          <div class="project">
-            <div class="project-title">Recipe Builder</div>
-            <img
-              class="proj-img"
-              src="dist/img/rbuilder.jpg"
-              alt="Recipe Builder"
-            />
-            <div class="proj-info">
-              Full-stack MEAN application where users can create and share their
-              recipes with the world. Running on Heroku.
-              <br />
-            </div>
-            <div class="proj-tools">
-              <p>Tools Used</p>
-
-              <div id="ul-holder">
-                <ul>
-                  <li>Angular Material</li>
-                  <li>Angular</li>
-                </ul>
-                <ul>
-                  <li>Node.js/Express.js</li>
-                  <li>MongoDB/Mongoose</li>
-                </ul>
-              </div>
-
-              <div class="proj-links">
-                <a
-                  class="livelink"
-                  href="https://angular-recipe-app-fs.herokuapp.com"
-                  target="_blank"
-                  ><i id="projectslinkicon" class="fas fa-link fa-fw"></i> Live
-                  Version</a
-                >
-
-                <a
-                  class="codelink"
-                  href="https://github.com/kowabunga/Angular-Recipe-App-FS"
-                  target="_blank"
-                  ><i id="projectsgithubicon" class="fab fa-github-square"> </i>
-                  View Code</a
-                >
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -293,41 +164,27 @@
         </div>
         <form method="POST" data-netlify="true" id="contactform">
           <h2 id="contact-me-h2">Reach Out</h2>
-          <label for="name" id="name-label">Your Name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Your Name"
-            required
-          />
 
-          <label for="email" id="email-label">Your Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Your Email"
-            required
-          />
+          <!-- Note: In order for label float animation, label MUST BE BELOW input -->
+          <div>
+            <input type="text" name="name" required />
+            <label for="name" class="label">Name</label>
+          </div>
 
-          <label for="company" id="company-label"
-            >Company/Organization (Optional)</label
-          >
-          <input
-            type="text"
-            name="company"
-            id="company"
-            placeholder="Company/Organization (Optional)"
-          />
+          <div>
+            <input type="email" name="email" required />
+            <label for="email" class="label">Email</label>
+          </div>
 
-          <label for="message" id="message-label">Your Message</label>
-          <textarea
-            name="message"
-            id="message"
-            placeholder="Your Message"
-            required
-          ></textarea>
+          <div>
+            <input type="text" name="company" required />
+            <label for="company" class="label">Company</label>
+          </div>
+
+          <div>
+            <textarea name="message" required></textarea>
+            <label for="message" class="label">Message</label>
+          </div>
           <button type="submit" id="form-submit">Send Your Message</button>
         </form>
       </section>
@@ -336,7 +193,7 @@
     <!-- ^ container ends ^ -->
     <!-- ---------------------------------------------------------------- -->
     <!-- scripts -->
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+
     <script src="dist/scripts/scripts.js"></script>
   </body>
 </html>

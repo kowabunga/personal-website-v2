@@ -11,37 +11,11 @@
     nameInput = document.getElementById('name'),
     emailInput = document.getElementById('email'),
     companyInput = document.getElementById('company'),
-    messageInput = document.getElementById('message'),
-    nameLabel = document.getElementById('name-label'),
-    emailLabel = document.getElementById('email-label'),
-    companyLabel = document.getElementById('company-label'),
-    messageLabel = document.getElementById('message-label');
+    messageInput = document.getElementById('message');
 
   window.addEventListener('load', () => {
     intro.classList.add('show');
   });
-
-  const labelShow = e => {
-    const elem = e.target.id;
-    if (elem === 'name') {
-      nameLabel.classList.add('show');
-      nameInput.placeholder = '';
-    } else if (elem === 'email') {
-      emailLabel.classList.add('show');
-      emailInput.placeholder = '';
-    } else if (elem === 'company') {
-      companyLabel.classList.add('show');
-      companyInput.placeholder = '';
-    } else if (elem === 'message') {
-      messageLabel.classList.add('show');
-      messageInput.placeholder = '';
-    }
-  };
-
-  nameInput.addEventListener('click', labelShow);
-  emailInput.addEventListener('click', labelShow);
-  companyInput.addEventListener('click', labelShow);
-  messageInput.addEventListener('click', labelShow);
 
   /* ---------------------------------------------------------------- */
   // Fade in about and contact on scroll position
@@ -91,21 +65,11 @@
       !navbar.classList.contains('show') &&
       !menubtn.classList.contains('rotate')
     ) {
-      body.classList.add('overlay');
       navbar.classList.add('show');
       menubtn.classList.add('rotate');
     } else {
-      body.classList.remove('overlay');
       navbar.classList.remove('show');
       menubtn.classList.remove('rotate');
     }
-  });
-
-  /* ---------------------------------------------------------------- */
-  // Smooth Scroll
-  const scroll = new SmoothScroll('a[href*="#"', {
-    header: '[data-scroll-header]',
-    speed: 500,
-    speedAsDuration: true,
   });
 })();

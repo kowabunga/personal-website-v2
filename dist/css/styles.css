@@ -22,20 +22,15 @@
 }
 
 /* ---------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   color: var(--primary-color);
   transition: 0.3s ease-in;
   background-color: rgb(239, 242, 255);
-}
-
-body.overlay * {
-  z-index: 1;
-}
-
-body.overlay {
-  background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
 }
 
 /* ---------------------------------------------------------------- */
@@ -55,17 +50,17 @@ body.overlay {
 /* ---------------------------------------------------------------- */
 .navbar {
   position: fixed;
-  min-width: 320px;
-  width: 30vw;
+  width: 320px;
   top: 0;
   bottom: 0;
   left: 0;
   z-index: 10 !important;
   transform: translateX(-100vw);
-  transition: 0.5s linear;
+  transition: 0.5s ease-in-out;
   flex-direction: column;
   background-color: var(--primary-color);
-  border-bottom: 1px solid var(--link-active-color);
+  border-right: 2px solid var(--link-active-color);
+  box-shadow: 0 5px 10px #333;
 }
 
 .navbar.show {
@@ -96,12 +91,6 @@ body.overlay {
 .navbar ul a:hover {
   color: var(--link-active-color);
 }
-
-/* .navbar ul {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-} */
 
 /* position icon */
 .icon {
@@ -248,7 +237,6 @@ body.overlay {
   opacity: 0;
   transition: 0.8s ease-in;
   min-height: 100vh;
-  padding: 20px;
   transform: translateX(0.35vw);
 }
 
@@ -506,7 +494,6 @@ a.codelink:hover {
 }
 
 #contactform {
-  position: relative;
   grid-area: form;
   margin: 0 auto;
   display: flex;
@@ -519,39 +506,6 @@ a.codelink:hover {
   color: var(--primary-color);
   border-radius: 20px;
   box-shadow: 0 0 8px var(--secondary-color);
-}
-
-#name-label,
-#email-label,
-#company-label,
-#message-label {
-  position: absolute;
-  opacity: 0;
-  left: 84px;
-  transition: 0.2s ease-in;
-}
-
-#name-label {
-  top: 130px;
-}
-
-#email-label {
-  top: 214px;
-}
-
-#company-label {
-  top: 295px;
-}
-
-#message-label {
-  top: 375px;
-}
-
-#name-label.show,
-#email-label.show,
-#company-label.show,
-#message-label.show {
-  opacity: 1;
 }
 
 input,
@@ -569,6 +523,35 @@ textarea {
 
 textarea {
   height: 12em;
+}
+
+#contactform div {
+  position: relative;
+  width: 100%;
+}
+
+#contactform div label {
+  position: absolute;
+  left: 10px;
+  top: 21.5px;
+  pointer-events: none;
+  color: rgb(141, 141, 141);
+  transition: 0.3s ease-in;
+}
+
+#contactform input:focus ~ label,
+#contactform textarea:focus ~ label,
+#contactform input:required:valid ~ label,
+#contactform textarea:required:valid ~ label {
+  top: -12px;
+  left: 0;
+  color: rgba(54, 21, 243, 0.8);
+  font-weight: bold;
+}
+
+#contactform input:required:valid,
+#contactform textarea:required:valid {
+  box-shadow: 0 0 2px rgba(54, 21, 243, 0.8);
 }
 
 /* overly complicated way to get rid of those ridiculously hideous form auto fill background colors on webkit browsers, anyway*/
@@ -689,5 +672,12 @@ button:hover {
 
   #contactform {
     width: 90%;
+  }
+}
+
+/* Disable smooth scroll if user has prefers-reduce-motion enabled */
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
