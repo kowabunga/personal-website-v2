@@ -58,9 +58,13 @@ window.addEventListener('scroll', () => {
 });
 
 /* ---------------------------------------------------------------- */
-// navbar show
 
 menubtn.addEventListener('click', e => {
+  navbar.classList.toggle('show');
+  menubtn.classList.toggle('rotate');
+});
+
+navbar.addEventListener('click', () => {
   navbar.classList.toggle('show');
   menubtn.classList.toggle('rotate');
 });
