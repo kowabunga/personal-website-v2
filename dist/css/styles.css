@@ -215,7 +215,7 @@ body {
   display: flex;
   justify-content: space-around;
   margin: 1em auto 0 auto;
-  width: 125px;
+  width: 125px !important;
 }
 
 .giticon,
@@ -246,6 +246,7 @@ body {
   min-height: 100vh;
   transform: translateX(0.35vw);
   width: 95%;
+  border-bottom: 1px solid var(--primary-color-light);
 }
 
 .projects.show {
@@ -354,6 +355,7 @@ a.codelink:hover {
   transform: translateX(-0.35vw);
   justify-content: space-around;
   width: 95%;
+  border-bottom: 1px solid var(--primary-color-light);
 }
 
 .about.show {
