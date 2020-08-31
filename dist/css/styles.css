@@ -273,9 +273,9 @@ body {
 }
 
 .card-header-h3 {
-  top: -15px;
   text-align: center;
   width: 100%;
+  color: var(--purpleish);
 }
 
 .card-header img {
@@ -322,7 +322,7 @@ body {
 
 .tools-list li {
   list-style-type: none;
-  color: var(--purpleish);
+  color: var(--primary-color-light);
   margin: 2.5px 0;
 }
 
