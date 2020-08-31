@@ -616,6 +616,12 @@ button:hover {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .navbar {
+    width: 75%;
+  }
+}
+
 /* Disable smooth scroll if user has prefers-reduce-motion enabled */
 @media screen and (prefers-reduced-motion: reduce) {
   html {
