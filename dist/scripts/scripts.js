@@ -61,8 +61,8 @@ window.addEventListener('scroll', () => {
 // navbar show
 
 menubtn.addEventListener('click', e => {
-  menubtn.classList.toggle('rotate');
   navbar.classList.toggle('show');
+  menubtn.classList.toggle('rotate');
 });
 
 emailInput.addEventListener('keydown', e => {

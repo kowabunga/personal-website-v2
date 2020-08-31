@@ -50,21 +50,23 @@
     </div>
     <!-- ---------------------------------------------------------------- -->
     <!-- container -->
-    <div class="container flex">
+    <div class="container flex-column">
       <!-- ---------------------------------------------------------------- -->
       <!-- frontpage -->
-      <section class="intro flex" id="intro">
+      <section class="intro flex-column" id="intro">
         <div>
           <h1 class="my-name">Anthony Siletti</h1>
-          <h3 class="title">Full Stack Web Developer</h3>
+          <h3 class="title light-text">Full Stack Web Developer</h3>
           <div class="links">
             <a href="https://github.com/kowabunga" target="_blank">
-              <i class="giticon fab fa-github-square fa-3x button"></i
+              <i
+                class="giticon fab fa-github-square fa-3x button light-text"
+              ></i
             ></a>
             <a
               href="https://www.linkedin.com/in/anthony-siletti-b26568178/"
               target="_blank"
-              ><i class="linkedicon fab fa-linkedin fa-3x button"></i
+              ><i class="linkedicon fab fa-linkedin fa-3x button light-text"></i
             ></a>
           </div>
         </div>
@@ -72,13 +74,189 @@
           <i class="fas fa-chevron-down fa-4x"></i>
         </div>
       </section>
+
       <!-- projects -->
-      <section class="projects" id="projects"></section>
+      <section class="projects flex-column" id="projects">
+        <h2 class="projects-title">Projects</h2>
+        <div class="projects-container flex">
+          <div class="card">
+            <div class="card-header">
+              <img src="./dist/img/nbd.jpg" alt="Next Best Thing" />
+            </div>
+            <div class="card-body flex-column">
+              <div>
+                <h3 class="card-header-h3">Next Best Thing</h3>
+                <div class="project-about-info">
+                  Fictional landing page for a novel on how to create the
+                  <em>Next Big Thing</em>
+                </div>
+              </div>
+              <div class="tools">
+                <h4 class="tools-used">Tools Used</h4>
+                <ul class="tools-list flex">
+                  <li class="tool-item"><i class="fa fa-check"></i> React</li>
+                  <li class="tool-item"><i class="fa fa-check"></i> CSS</li>
+                </ul>
+              </div>
+              <div class="links flex">
+                <a
+                  class="livelink"
+                  href="https://kowabunga.github.io/next-best-thing-react/"
+                  target="_blank"
+                  ><i id="projectslinkicon" class="fas fa-link fa-fw"></i> Live
+                  Version</a
+                >
+
+                <a
+                  class="codelink"
+                  href="https://github.com/kowabunga/next-best-thing-react"
+                  target="_blank"
+                  ><i id="projectsgithubicon" class="fab fa-github-square"> </i>
+                  View Code</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <img src="./dist/img/rbuilder.jpg" alt="Delectable Recipes" />
+            </div>
+            <div class="card-body flex-column">
+              <div>
+                <h3 class="card-header-h3">Delectable Recipes</h3>
+                <div class="project-about-info">
+                  Full-stack MEAN application where users can create and share
+                  their recipes with the world. Running on Heroku.
+                </div>
+              </div>
+              <div class="tools">
+                <h4 class="tools-used">Tools Used</h4>
+                <ul class="tools-list flex">
+                  <li class="tool-item"><i class="fa fa-check"></i> Angular</li>
+                  <li class="tool-item">
+                    <i class="fa fa-check"></i> Angular Material
+                  </li>
+                  <li class="tool-item"><i class="fa fa-check"></i> SCSS</li>
+                  <li class="tool-item">
+                    <i class="fa fa-check"></i> MongoDB/Mongoose
+                  </li>
+                  <li class="tool-item"><i class="fa fa-check"></i> Express</li>
+                  <li class="tool-item">
+                    <i class="fa fa-check"></i> TypeScript
+                  </li>
+                </ul>
+              </div>
+              <div class="links flex">
+                <a
+                  class="livelink"
+                  href="https://angular-recipe-app-fs.herokuapp.com"
+                  target="_blank"
+                  ><i id="projectslinkicon" class="fas fa-link fa-fw"></i> Live
+                  Version</a
+                >
+
+                <a
+                  class="codelink"
+                  href="https://github.com/kowabunga/Angular-Recipe-App-FS"
+                  target="_blank"
+                  ><i id="projectsgithubicon" class="fab fa-github-square"> </i>
+                  View Code</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <img src="./dist/img/ais.jpg" alt="Angular Image Searcher" />
+            </div>
+            <div class="card-body flex-column">
+              <div>
+                <h3 class="card-header-h3">Angular Image Searcher</h3>
+                <div class="project-about-info">
+                  AngularImageSearcher is a single page application devoted to
+                  making the process of searching for images across multiple
+                  open source libaries quickly and easily.
+                </div>
+              </div>
+              <div class="tools">
+                <h4 class="tools-used">Tools Used</h4>
+                <ul class="tools-list flex">
+                  <li class="tool-item"><i class="fa fa-check"></i> Angular</li>
+                  <li class="tool-item">
+                    <i class="fa fa-check"></i> TypeScript
+                  </li>
+                  <li class="tool-item"><i class="fa fa-check"></i> SCSS</li>
+                </ul>
+              </div>
+              <div class="links flex">
+                <a
+                  class="livelink"
+                  href="https://kowabunga.github.io/angular-image-searcher/"
+                  target="_blank"
+                  ><i id="projectslinkicon" class="fas fa-link fa-fw"></i> Live
+                  Version</a
+                >
+
+                <a
+                  class="codelink"
+                  href="https://github.com/kowabunga/angular-image-searcher"
+                  target="_blank"
+                  ><i id="projectsgithubicon" class="fab fa-github-square"> </i>
+                  View Code</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <img src="./dist/img/mt.jpg" alt="MyTube" />
+            </div>
+            <div class="card-body flex-column">
+              <div>
+                <h3 class="card-header-h3">MyTube</h3>
+                <div class="project-about-info">
+                  A new take on a front-end for Youtube. Incorporates a
+                  minimalistic design.
+                </div>
+              </div>
+              <div class="tools">
+                <h4 class="tools-used">Tools Used</h4>
+                <ul class="tools-list flex">
+                  <li class="tool-item">
+                    <i class="fa fa-check"></i> JavaScript
+                  </li>
+                  <li class="tool-item"><i class="fa fa-check"></i> SCSS</li>
+                </ul>
+              </div>
+              <div class="links flex">
+                <a
+                  class="livelink"
+                  href="https://kowabunga.github.io/MyTube/"
+                  target="_blank"
+                  ><i id="projectslinkicon" class="fas fa-link fa-fw"></i> Live
+                  Version</a
+                >
+
+                <a
+                  class="codelink"
+                  href="https://github.com/kowabunga/MyTube"
+                  target="_blank"
+                  ><i id="projectsgithubicon" class="fab fa-github-square"> </i>
+                  View Code</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- about me -->
-      <section class="about flex" id="about">
+      <section class="about flex-column" id="about">
         <h2 class="about-name">About</h2>
-        <p class="about-me">
+        <p class="about-me light-text">
           My name is Anthony Siletti. Having completed my Bachelors of Science
           in Computer Science at John Jay College (CUNY), I've set my mind on a
           career in web development. From New York City, my focus towards the
@@ -101,7 +279,7 @@
       <section class="contact" id="contact">
         <div class="contact-info">
           <h1 class="contactme">Want To Get In Touch?</h1>
-          <h3 class="contactmesub">
+          <h3 class="contactmesub light-text">
             Feel free to use the form and I will respond as soon as possible
           </h3>
         </div>
