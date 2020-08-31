@@ -18,8 +18,8 @@
   <body>
     <!-- ---------------------------------------------------------------- -->
     <!-- nav bar -->
-    <nav class="navbar flex" id="nav" data-scroll-header>
-      <ul id="navUL" class="flex">
+    <nav class="navbar flex" data-scroll-header>
+      <ul class="flex">
         <li>
           <a
             href="https://drive.google.com/uc?export=download&id=1QUkpbJzPGMSje0AhTPYfg4GqtnUQkNi9"
@@ -43,7 +43,7 @@
       </ul>
     </nav>
 
-    <div class="icon" id="menubtn">
+    <div class="icon menubtn">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
@@ -53,127 +53,76 @@
     <div class="container flex">
       <!-- ---------------------------------------------------------------- -->
       <!-- frontpage -->
-      <section id="intro" class="flex">
+      <section class="intro flex" id="intro">
         <div>
-          <h1 id="my-name">Anthony Siletti</h1>
-          <h3 id="title">Full Stack Web Developer</h3>
-          <hr id="hr1" />
-          <div id="links">
+          <h1 class="my-name">Anthony Siletti</h1>
+          <h3 class="title">Full Stack Web Developer</h3>
+          <div class="links">
             <a href="https://github.com/kowabunga" target="_blank">
-              <i id="giticon" class="fab fa-github-square fa-2x button"></i
+              <i class="giticon fab fa-github-square fa-3x button"></i
             ></a>
             <a
               href="https://www.linkedin.com/in/anthony-siletti-b26568178/"
               target="_blank"
-              ><i id="linkedicon" class="fab fa-linkedin fa-2x button"></i
+              ><i class="linkedicon fab fa-linkedin fa-3x button"></i
             ></a>
           </div>
         </div>
         <div class="down-icon">
-          <i class="fas fa-chevron-down fa-3x"></i>
+          <i class="fas fa-chevron-down fa-4x"></i>
         </div>
       </section>
       <!-- projects -->
-      <section id="projects">
-        <h1 id="myproj">My Projects:</h1>
-        <h3 id="looky">Take a Look-See</h3>
-        <div class="webprojects">
-          <!-- ---------------------------------------------------------------- -->
-
-          <div class="project">
-            <div class="project-title">The Next Big Thing</div>
-            <img
-              class="proj-img"
-              src="dist/img/nbd.jpg"
-              alt="Next Best Thing Landing
-            Page"
-            />
-            <div class="proj-info">
-              A landing page for a ficitional book entitled "The Next Best
-              Thing", which was written to help entrepreneurs discover the means
-              to creating the next, BIG, thing.
-              <br />
-            </div>
-            <div class="proj-tools">
-              <p>Tools Used</p>
-
-              <ul>
-                <li>React</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-              </ul>
-
-              <div class="proj-links">
-                <a
-                  class="livelink"
-                  href="https://kowabunga.github.io/next-best-thing-react/"
-                  target="_blank"
-                  ><i id="projectslinkicon" class="fas fa-link fa-fw"></i> Live
-                  Version</a
-                >
-
-                <a
-                  class="codelink"
-                  href="https://github.com/kowabunga/next-best-thing-react"
-                  target="_blank"
-                  ><i id="projectsgithubicon" class="fab fa-github-square"> </i>
-                  View Code</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section class="projects" id="projects"></section>
 
       <!-- about me -->
-      <section id="about">
-        <img id="picture" src="dist/img/me.jpg" alt="" />
-        <div id="about-info">
-          <h1 id="aboutname">About</h1>
-          <p id="aboutme">
-            My name is Anthony Siletti. Having completed my Bachelors of Science
-            in Computer Science at John Jay College (CUNY), I've set my mind on
-            a career in web development. From New York City, my focus towards
-            the end of my college career became web developement with a penchant
-            for expanding my skillset. A few of the skills you'll see in this
-            portfolio include:
-          </p>
-          <!-- CSS, SASS, JavaScript and React. -->
-          <div id="aboutskills">
-            <ul>
-              <li><i class="fab fa-css3-alt"></i> <span>CSS</span></li>
-              <li><i class="fab fa-sass"></i> <span>Sass</span></li>
-              <li><i class="fab fa-github-square"></i> <span>Git</span></li>
-            </ul>
-            <ul>
-              <li><i class="fab fa-js-square"></i> <span>JavaScript</span></li>
-              <li><i class="fab fa-react"></i> <span>React</span></li>
-              <li><i class="fab fa-angular"></i> <span>Angular</span></li>
-            </ul>
-          </div>
-        </div>
+      <section class="about flex" id="about">
+        <h2 class="about-name">About</h2>
+        <p class="about-me">
+          My name is Anthony Siletti. Having completed my Bachelors of Science
+          in Computer Science at John Jay College (CUNY), I've set my mind on a
+          career in web development. From New York City, my focus towards the
+          end of my college career became web developement with a penchant for
+          expanding my skillset.
+        </p>
+
+        <h2 class="skills">Skills</h2>
+        <ul class="skills-ul">
+          <li><i class="fab fa-github-square fa-4x"></i></li>
+          <li><i class="fab fa-css3-alt fa-4x"></i></li>
+          <li><i class="fab fa-sass fa-4x"></i></li>
+          <li><i class="fab fa-js-square fa-4x"></i></li>
+          <li><i class="fab fa-react fa-4x"></i></li>
+          <li><i class="fab fa-angular fa-4x"></i></li>
+        </ul>
       </section>
 
       <!-- contact -->
-      <section id="contact">
-        <div id="contact-info">
-          <h1 id="contactme">Want To Get In Touch?</h1>
-          <h3 id="contactmesub">
+      <section class="contact" id="contact">
+        <div class="contact-info">
+          <h1 class="contactme">Want To Get In Touch?</h1>
+          <h3 class="contactmesub">
             Feel free to use the form and I will respond as soon as possible
           </h3>
         </div>
-        <form method="POST" data-netlify="true" id="contactform">
-          <h2 id="contact-me-h2">Reach Out</h2>
+        <form
+          method="POST"
+          data-netlify="true"
+          class="contactform"
+          action="#/contact"
+        >
+          <h2 class="form-submit-confirmed hidden">
+            Your message has been sent!
+          </h2>
 
-          <!-- Note: In order for label float animation, label MUST BE BELOW input -->
           <div>
             <input type="text" name="name" required />
             <label for="name" class="label">Name</label>
           </div>
 
           <div>
-            <input type="email" name="email" required />
-            <label for="email" class="label">Email</label>
+            <input type="text" name="email" required class="email-input" />
+            <label for="email" class="label" class="email-label">Email</label>
           </div>
 
           <div>
