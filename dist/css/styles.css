@@ -293,6 +293,13 @@ body {
   padding: 5px;
 }
 
+.card-links {
+  display: flex;
+  justify-content: space-around;
+  margin: 1em auto 0 auto;
+  width: 100%;
+}
+
 .project-about-info {
   padding: 0 25px;
 }
