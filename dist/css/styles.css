@@ -480,6 +480,7 @@ textarea {
   pointer-events: none;
   color: rgb(141, 141, 141);
   transition: 0.3s ease-in;
+  z-index: 15;
 }
 
 .contactform input:focus ~ label,
