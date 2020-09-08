@@ -370,8 +370,7 @@ a.codelink:hover {
   transform: translateX(0);
 }
 
-.about-name,
-.skills {
+.about-name {
   font-size: 6em;
 }
 
