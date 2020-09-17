@@ -12,7 +12,7 @@
       src="https://kit.fontawesome.com/ba6f5f095e.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="dist/css/styles.css" />
+    <link rel="stylesheet" href="dist/css/styles.min.css" />
     <title>Anthony Siletti</title>
   </head>
   <body>
@@ -25,6 +25,7 @@
             href="https://drive.google.com/uc?export=download&id=1QUkpbJzPGMSje0AhTPYfg4GqtnUQkNi9"
             target="_blank"
             id="resume-holder"
+            rel="noreferrer"
             ><i class="fas fa-file-download"></i> Resume</a
           >
         </li>
@@ -56,9 +57,13 @@
       <section class="intro flex-column" id="intro">
         <div class="intro-info">
           <h1 class="my-name">Anthony Siletti</h1>
-          <h3 class="title light-text">Full Stack Web Developer</h3>
+          <h2 class="title light-text">Full Stack Web Developer</h2>
           <div class="links">
-            <a href="https://github.com/kowabunga" target="_blank">
+            <a
+              href="https://github.com/kowabunga"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i
                 class="giticon fab fa-github-square fa-3x button light-text"
               ></i
@@ -66,6 +71,7 @@
             <a
               href="https://www.linkedin.com/in/anthony-siletti-b26568178/"
               target="_blank"
+              rel="noreferrer"
               ><i class="linkedicon fab fa-linkedin fa-3x button light-text"></i
             ></a>
           </div>
@@ -104,6 +110,7 @@
                   class="livelink"
                   href="https://kowabunga.github.io/next-best-thing-react/"
                   target="_blank"
+                  rel="noreferrer"
                   ><i id="projectslinkicon" class="fas fa-link fa-fw"></i> Live
                   Version</a
                 >
@@ -112,6 +119,7 @@
                   class="codelink"
                   href="https://github.com/kowabunga/next-best-thing-react"
                   target="_blank"
+                  rel="noreferrer"
                   ><i id="projectsgithubicon" class="fab fa-github-square"> </i>
                   View Code</a
                 >
@@ -153,6 +161,7 @@
                   class="livelink"
                   href="https://angular-recipe-app-fs.herokuapp.com"
                   target="_blank"
+                  rel="noreferrer"
                   ><i id="projectslinkicon" class="fas fa-link fa-fw"></i> Live
                   Version</a
                 >
@@ -161,6 +170,7 @@
                   class="codelink"
                   href="https://github.com/kowabunga/Angular-Recipe-App-FS"
                   target="_blank"
+                  rel="noreferrer"
                   ><i id="projectsgithubicon" class="fab fa-github-square"> </i>
                   View Code</a
                 >
@@ -196,6 +206,7 @@
                   class="livelink"
                   href="https://kowabunga.github.io/angular-image-searcher/"
                   target="_blank"
+                  rel="noreferrer"
                   ><i id="projectslinkicon" class="fas fa-link fa-fw"></i> Live
                   Version</a
                 >
@@ -204,6 +215,7 @@
                   class="codelink"
                   href="https://github.com/kowabunga/angular-image-searcher"
                   target="_blank"
+                  rel="noreferrer"
                   ><i id="projectsgithubicon" class="fab fa-github-square"> </i>
                   View Code</a
                 >
@@ -237,6 +249,7 @@
                   class="livelink"
                   href="https://kowabunga.github.io/MyTube/"
                   target="_blank"
+                  rel="noreferrer"
                   ><i id="projectslinkicon" class="fas fa-link fa-fw"></i> Live
                   Version</a
                 >
@@ -245,6 +258,7 @@
                   class="codelink"
                   href="https://github.com/kowabunga/MyTube"
                   target="_blank"
+                  rel="noreferrer"
                   ><i id="projectsgithubicon" class="fab fa-github-square"> </i>
                   View Code</a
                 >
@@ -278,7 +292,7 @@
       <!-- contact -->
       <section class="contact" id="contact">
         <div class="contact-info">
-          <h1 class="contactme">Want To Get In Touch?</h1>
+          <h2 class="contactme">Want To Get In Touch?</h2>
           <h3 class="contactmesub light-text">
             Feel free to use the form and I will respond as soon as possible
           </h3>
@@ -294,22 +308,28 @@
           </h2>
 
           <div>
-            <input type="text" name="name" required />
+            <input type="text" name="name" id="name" required />
             <label for="name" class="label">Name</label>
           </div>
 
           <div>
-            <input type="text" name="email" required class="email-input" />
+            <input
+              type="text"
+              name="email"
+              class="email-input"
+              id="email"
+              required
+            />
             <label for="email" class="label" class="email-label">Email</label>
           </div>
 
           <div>
-            <input type="text" name="company" required />
+            <input type="text" name="company" id="company" required />
             <label for="company" class="label">Company</label>
           </div>
 
           <div>
-            <textarea name="message" required></textarea>
+            <textarea name="message" id="message" required></textarea>
             <label for="message" class="label">Message</label>
           </div>
           <button type="submit" id="form-submit">Send Your Message</button>
