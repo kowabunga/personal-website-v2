@@ -71,11 +71,9 @@ body {
   left: 0;
   z-index: 10 !important;
   transform: translateX(-100vw);
-  transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in;
   flex-direction: column;
   background-color: var(--primary-color);
-  border-right: 2px solid var(--link-active-color);
-  box-shadow: 0 5px 10px 0.333;
 }
 
 .navbar.show {
@@ -406,8 +404,8 @@ a.codelink:hover {
   transform: translateX(0.35vw);
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: 'contact form';
+  grid-template-columns: 1fr 1px 1fr;
+  grid-template-areas: 'contact seperator form';
   margin-bottom: 10px;
 }
 
@@ -420,23 +418,31 @@ a.codelink:hover {
   display: flex;
   flex-direction: column;
   grid-area: header;
-  padding-left: 1em;
   text-align: center;
+  margin: 0 auto;
   grid-area: contact;
+  width: 60%;
 }
 
-.contactme {
+.contact-seperator {
+  grid-area: seperator;
+  width: 1px;
+  height: 100%;
+  background-color: var(--primary-color-light);
+}
+
+.contact-me {
   font-size: 6em;
   margin: 0 auto 0.5em auto;
 }
 
-.contactmesub {
+.contact-me-sub {
   color: var(--primary-color-light);
   font-size: 2em;
   margin: 0 auto 1em auto;
 }
 
-.contactform {
+.contact-form {
   grid-area: form;
   margin: 0 auto;
   display: flex;
@@ -467,12 +473,12 @@ textarea {
   height: 12em;
 }
 
-.contactform div {
+.contact-form div {
   position: relative;
   width: 100%;
 }
 
-.contactform div label {
+.contact-form div label {
   position: absolute;
   left: 10px;
   top: 21.5px;
@@ -482,18 +488,18 @@ textarea {
   z-index: 15;
 }
 
-.contactform input:focus ~ label,
-.contactform textarea:focus ~ label,
-.contactform input:required:valid ~ label,
-.contactform textarea:required:valid ~ label {
+.contact-form input:focus ~ label,
+.contact-form textarea:focus ~ label,
+.contact-form input:required:valid ~ label,
+.contact-form textarea:required:valid ~ label {
   top: -12px;
   left: 0;
   color: var(--purpleish);
   font-weight: bold;
 }
 
-.contactform input:required:valid,
-.contactform textarea:required:valid {
+.contact-form input:required:valid,
+.contact-form textarea:required:valid {
   box-shadow: 0 0 2px var(--purpleish);
 }
 
@@ -570,6 +576,10 @@ button:hover {
     grid-template-areas: 'contact' 'form';
     grid-template-columns: 1fr;
   }
+
+  .contact-seperator {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -577,18 +587,13 @@ button:hover {
   .projects-title,
   .skills,
   .about-name,
-  .contactme {
+  .contact-me {
     font-size: 6em;
   }
 
   .title,
-  .contactmesub {
+  .contact-me-sub {
     font-size: 1.75em;
-  }
-
-  .contact {
-    grid-template-areas: 'contact' 'form';
-    grid-template-columns: 1fr;
   }
 }
 
@@ -601,7 +606,7 @@ button:hover {
     font-size: 1.5em;
   }
   .projects-title,
-  .contactme,
+  .contact-me,
   .skills,
   .about-name {
     font-size: 3em;
@@ -612,11 +617,11 @@ button:hover {
   }
 
   .about-me,
-  .contactmesub {
+  .contact-me-sub {
     font-size: 1.25em;
   }
 
-  .contactform {
+  .contact-form {
     width: 100%;
   }
 
