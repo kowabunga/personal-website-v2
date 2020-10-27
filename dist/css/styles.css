@@ -69,7 +69,6 @@ body {
   top: 0;
   bottom: 0;
   left: 0;
-  z-index: 10 !important;
   transform: translateX(-100vw);
   transition: 0.5s ease-in;
   flex-direction: column;
@@ -152,10 +151,6 @@ body {
 .resume-holder i {
   margin-right: 10px;
   transform: scale(0.8);
-}
-
-.resume-holder:hover {
-  color: var(--purpleish);
 }
 
 /* ---------------------------------------------------------------- */
