@@ -1,6 +1,7 @@
 /* ---------------------------------------------------------------- */
 //dropdown toggle
 const menubtn = document.querySelector('.menubtn'),
+  menuBtnBars = document.querySelectorAll('.bar'),
   navbar = document.querySelector('.navbar'),
   intro = document.querySelector('.intro-info'),
   projects = document.querySelector('.projects'),
@@ -46,6 +47,12 @@ window.addEventListener('scroll', () => {
 
   if (contactSec.top <= scrollPos / (3 / 2)) {
     contact.classList.add('show');
+  }
+
+  if (projectSec.top <= 75) {
+    menuBtnBars.forEach(bar => bar.classList.remove('light-background'));
+  } else {
+    menuBtnBars.forEach(bar => bar.classList.add('light-background'));
   }
 });
 
