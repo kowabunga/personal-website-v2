@@ -140,22 +140,6 @@ body {
   transform: rotate(-45deg) translate(6px, -6.8px);
 }
 
-.resume-holder {
-  width: 125px;
-  height: 40px;
-  background-color: transparent;
-  padding: 10px;
-  margin-left: 15px;
-  border-radius: 3px;
-  color: var(--secondary-color);
-  font-size: 1.5rem;
-}
-
-.resume-holder i {
-  margin-right: 10px;
-  transform: scale(0.8);
-}
-
 /* ---------------------------------------------------------------- */
 /* home page */
 .intro {
