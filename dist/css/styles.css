@@ -374,6 +374,16 @@ a.codelink:hover {
 .skills-ul li {
   list-style-type: none;
   color: var(--purpleish);
+  text-align: center;
+}
+
+.skills-ul li small {
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+.skills-ul li:hover small {
+  opacity: 1;
 }
 
 /* ---------------------------------------------------------------- */
