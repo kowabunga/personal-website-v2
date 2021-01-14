@@ -36,13 +36,10 @@ body {
   background: url('../img/nikolay-tarashchenko-DUfkXRwGQm8-unsplash.jpg')
     no-repeat top center;
   background-color: var(--background-dark);
+  overflow-x: hidden;
 }
 
-body * {
-  z-index: 1;
-}
-
-body::after {
+body::before {
   content: '';
   background-color: rgba(0, 0, 0, 0.514);
   position: fixed;
@@ -50,12 +47,18 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
+  transition: 0.3s ease-in;
 }
 
 /* ---------------------------------------------------------------- */
 /* main container */
 .container {
   letter-spacing: 1px;
+  transition: 0.5s ease-in;
+}
+
+.container.show {
+  transform: translateX(25rem);
 }
 
 .flex {
@@ -95,12 +98,10 @@ body::after {
   transform: translateX(-25rem);
   transition: 0.5s ease-in;
   flex-direction: column;
-  background-color: var(--primary-color);
 }
 
 .navbar.show {
   transform: translateX(0);
-  box-shadow: 0 0 9999px #333;
 }
 
 .navbar ul {
@@ -110,9 +111,11 @@ body::after {
   height: 100%;
   transition: 0.4s ease-in;
 }
+
 .navbar li {
   margin: 0 2em;
 }
+
 .navbar a {
   text-decoration: none;
   font-size: 1.75em;
@@ -120,6 +123,7 @@ body::after {
   width: 4em;
   transition: 0.4s;
 }
+
 .navbar ul a:hover {
   color: var(--active-color);
 }
